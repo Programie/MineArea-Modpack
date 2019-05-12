@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+  <recipe name="Conduit, Item" required="true">
+    <crafting>
+      <grid>
+        <item name="CONDUIT_BINDER" />
+        <item name="CONDUIT_BINDER" />
+        <item name="CONDUIT_BINDER" />
+        <item name="dustRedstone" />
+        <item name="dustRedstone" />
+        <item name="dustRedstone" />
+        <item name="CONDUIT_BINDER" />
+        <item name="CONDUIT_BINDER" />
+        <item name="CONDUIT_BINDER" />
+      </grid>
+      <output name="enderio:item_item_conduit:0" amount="8" />
+    </crafting>
+  </recipe>
+  <!-- Make Pam's HarvestCraft recipes a bit like known from the mod for Minecraft 1.7 -->
+  <recipe name="Toast" required="true">
+    <smelting exp="0.35">
+      <input name="minecraft:bread" />
+      <output name="foodToast" />
+    </smelting>
+  </recipe>
+  <recipe name="Hamburger" required="true">
+    <crafting>
+      <shapeless>
+        <item name="toolSkillet" />
+        <item name="foodToast" />
+        <item name="foodFirmtofu" />
+      </shapeless>
+      <output name="foodHamburger" />
+    </crafting>
+  </recipe>
+  <recipe name="Cooked Tofeak" required="true">
+    <smelting>
+      <input name="foodFirmtofu" />
+      <output name="harvestcraft:cookedtofeakitem" />
+    </smelting>
+  </recipe>
+</enderio:recipes>
