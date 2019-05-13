@@ -64,6 +64,9 @@
 - name: ConnectedTexturesMod
   pattern: CTM-*.jar
   url: https://minecraft.curseforge.com/projects/ctm
+- name: Crafting Tweaks
+  pattern: CraftingTweaks_*.jar
+  url: https://minecraft.curseforge.com/projects/crafting-tweaks
 - name: Custom Mob Spawner
   pattern: CustomMobSpawner-*.jar
   url: https://www.mocreatures.org
@@ -160,6 +163,9 @@
 - name: Pam's HarvestCraft
   pattern: Pam's HarvestCraft *.jar
   url: https://minecraft.curseforge.com/projects/pams-harvestcraft
+- name: Ping
+  pattern: Ping-*.jar
+  url: https://minecraft.curseforge.com/projects/ping
 - name: Placebo
   pattern: Placebo-*.jar
   url: https://minecraft.curseforge.com/projects/placebo
@@ -205,9 +211,18 @@
 - name: Tinkers' Tool Leveling
   pattern: TinkerToolLeveling-*.jar
   url: https://minecraft.curseforge.com/projects/tinkers-tool-leveling
+- name: TorchMaster
+  pattern: torchmaster_*.jar
+  url: https://minecraft.curseforge.com/projects/torchmaster
 - name: Underground Biomes
   pattern: UndergroundBiomesConstructs-*.jar
   url: https://minecraft.curseforge.com/projects/underground-biomes
+- name: UniDict
+  pattern: UniDict-*.jar
+  url: https://minecraft.curseforge.com/projects/unidict
+- name: WanionLib
+  pattern: WanionLib-*.jar
+  url: https://minecraft.curseforge.com/projects/wanionlib
 - name: Wawla
   pattern: Wawla-*.jar
   url: https://minecraft.curseforge.com/projects/wawla-what-are-we-looking-at
