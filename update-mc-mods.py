@@ -100,38 +100,59 @@ def main():
     mod_list_file = os.path.join(root_dir, "mods.yaml")
     update_info_file = os.path.join(root_dir, "updated-mods.txt")
 
+    update_info_data = {
+        "new": [],
+        "update": []
+    }
+
     with open(mod_list_file) as mod_list_yaml:
         mods = yaml.safe_load(mod_list_yaml)
 
         mods = [Mod(mods_dir, mod) for mod in mods]
         mods = [mod for mod in mods if mod.check_url()]
 
-        with open(update_info_file, "w") as update_info:
-            for mod in mods:
-                old_version = mod.get_modinfo().version
+        for mod in mods:
+            old_version = mod.get_modinfo().version
 
-                latest_filename = mod.get_latest_file()
+            latest_filename = mod.get_latest_file()
 
-                if mod.filename is not None:
-                    current_filename = os.path.basename(mod.filename)
+            if mod.filename is not None:
+                current_filename = os.path.basename(mod.filename)
 
-                    if latest_filename == current_filename:
-                        print("No update found for {}".format(mod.name), file=sys.stderr)
-                        continue
+                if latest_filename == current_filename:
+                    print("No update found for {}".format(mod.name), file=sys.stderr)
+                    continue
 
-                    print("Update for {} found: {} -> {}".format(mod.name, current_filename, latest_filename))
+                print("Update for {} found: {} -> {}".format(mod.name, current_filename, latest_filename))
 
-                download_filepath = os.path.join(mods_dir, latest_filename)
-                if mod.download(download_filepath):
-                    new_version = MCModInfo(download_filepath, mod.pattern).version
+            download_filepath = os.path.join(mods_dir, latest_filename)
+            if mod.download(download_filepath):
+                new_version = MCModInfo(download_filepath, mod.pattern).version
 
-                    update_info.write("{} ({}): {} -> {}\n".format(mod.name, mod.url, old_version, new_version))
+                if mod.filename is None:
+                    update_info_data["new"].append("{} ({})".format(mod.name, mod.url))
+                else:
+                    update_info_data["update"].append("{} ({}): {} -> {}".format(mod.name, mod.url, old_version, new_version))
 
-                    # Remove old mod file
-                    if mod.filename is not None and os.path.exists(mod.filename):
-                        os.remove(mod.filename)
-                elif os.path.exists(download_filepath):
-                    os.remove(download_filepath)
+                # Remove old mod file
+                if mod.filename is not None and os.path.exists(mod.filename):
+                    os.remove(mod.filename)
+            elif os.path.exists(download_filepath):
+                os.remove(download_filepath)
+
+    with open(update_info_file, "w") as update_info:
+        if update_info_data["new"]:
+            update_info.write("New mods:\n\n")
+            for line in update_info_data["new"]:
+                update_info.write("- {}\n".format(line))
+
+        if update_info_data["update"]:
+            if update_info_data["new"]:
+                update_info.write("\n")
+
+            update_info.write("Updated mods:\n\n")
+            for line in update_info_data["update"]:
+                update_info.write("- {}\n".format(line))
 
 
 if __name__ == "__main__":
