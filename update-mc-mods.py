@@ -97,6 +97,9 @@ def main():
     root_dir = os.path.dirname(os.path.realpath(__file__))
     mods_dir = os.path.join(root_dir, "source", "mods")
 
+    if not os.path.exists(mods_dir):
+        os.mkdir(mods_dir)
+
     mod_list_file = os.path.join(root_dir, "mods.yaml")
     update_info_file = os.path.join(root_dir, "updated-mods.txt")
 
