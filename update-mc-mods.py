@@ -23,12 +23,12 @@ def get_modinfo(filename):
 
         if "name" in mod_info:
             name = mod_info["name"]
-        
+
         if "version" in mod_info:
             version = mod_info["version"]
     except Exception as exception:
         print("Unable to read mcmod.info: {}".format(exception), file=sys.stderr)
-    
+
     return name, version
 
 
