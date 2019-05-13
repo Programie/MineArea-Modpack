@@ -48,80 +48,85 @@ def download_file(url, local_filename):
         return False
 
 
-root_dir = os.path.dirname(os.path.realpath(__file__))
-mods_dir = os.path.join(root_dir, "source", "mods")
-latest_url_suffix = "/files/latest"
+def main():
+    root_dir = os.path.dirname(os.path.realpath(__file__))
+    mods_dir = os.path.join(root_dir, "source", "mods")
+    latest_url_suffix = "/files/latest"
 
-mod_list_file = os.path.join(root_dir, "mods.csv")
-update_info_file = os.path.join(root_dir, "updated-mods.txt")
+    mod_list_file = os.path.join(root_dir, "mods.csv")
+    update_info_file = os.path.join(root_dir, "updated-mods.txt")
 
-with open(mod_list_file) as csv_file:
-    mods = csv.reader(csv_file)
+    with open(mod_list_file) as csv_file:
+        mods = csv.reader(csv_file)
 
-    with open(update_info_file, "w") as update_info:
-        for line_index, mod in enumerate(mods):
-            # First line contains the column headers
-            if line_index == 0:
-                continue
+        with open(update_info_file, "w") as update_info:
+            for line_index, mod in enumerate(mods):
+                # First line contains the column headers
+                if line_index == 0:
+                    continue
 
-            prefix, url = mod
+                prefix, url = mod
 
-            if not url:
-                print("No URL defined for {}".format(prefix), file=sys.stderr)
-                continue
+                if not url:
+                    print("No URL defined for {}".format(prefix), file=sys.stderr)
+                    continue
 
-            parsed_url = urlparse(url)
+                parsed_url = urlparse(url)
 
-            if parsed_url.netloc != "minecraft.curseforge.com":
-                print("Skipping non-curseforge URL: {}".format(url), file=sys.stderr)
-                continue
+                if parsed_url.netloc != "minecraft.curseforge.com":
+                    print("Skipping non-curseforge URL: {}".format(url), file=sys.stderr)
+                    continue
 
-            file_pattern = "{}*".format(prefix)
+                file_pattern = "{}*".format(prefix)
 
-            matching_files = glob.glob(os.path.join(mods_dir, file_pattern))
+                matching_files = glob.glob(os.path.join(mods_dir, file_pattern))
 
-            if not matching_files:
-                print("No files found matching pattern {}".format(
-                    file_pattern), file=sys.stderr)
-                continue
-            elif len(matching_files) > 1:
-                print("Multiple files matching pattern: {}".format(
-                    file_pattern), file=sys.stderr)
-                continue
-            
-            local_filepath = matching_files[0]
-            local_filename = os.path.basename(local_filepath)
+                if not matching_files:
+                    print("No files found matching pattern {}".format(
+                        file_pattern), file=sys.stderr)
+                    continue
+                elif len(matching_files) > 1:
+                    print("Multiple files matching pattern: {}".format(
+                        file_pattern), file=sys.stderr)
+                    continue
 
-            mod_name, old_version = get_modinfo(local_filepath)
+                local_filepath = matching_files[0]
+                local_filename = os.path.basename(local_filepath)
 
-            if not old_version:
-                old_version = local_filename
+                mod_name, old_version = get_modinfo(local_filepath)
 
-            response = requests.get(url + latest_url_suffix, allow_redirects=False)
+                if not old_version:
+                    old_version = local_filename
 
-            download_url = response.headers["Location"]
+                response = requests.get(url + latest_url_suffix, allow_redirects=False)
 
-            latest_filename = os.path.basename(download_url)
+                download_url = response.headers["Location"]
 
-            if latest_filename == local_filename:
-                print("No update found for {}".format(prefix), file=sys.stderr)
-                continue
-            
-            download_filepath = os.path.join(mods_dir, latest_filename)
+                latest_filename = os.path.basename(download_url)
 
-            print("Update for {} found: {} -> {}".format(prefix, local_filename, latest_filename))
+                if latest_filename == local_filename:
+                    print("No update found for {}".format(prefix), file=sys.stderr)
+                    continue
 
-            if download_file(download_url, download_filepath):
-                mod_name, new_version = get_modinfo(download_filepath)
+                download_filepath = os.path.join(mods_dir, latest_filename)
 
-                if not mod_name:
-                    mod_name = prefix
-                
-                if not new_version:
-                    new_version = latest_filename
+                print("Update for {} found: {} -> {}".format(prefix, local_filename, latest_filename))
 
-                update_info.write("{} ({}): {} -> {}\n".format(mod_name, url, old_version, new_version))
+                if download_file(download_url, download_filepath):
+                    mod_name, new_version = get_modinfo(download_filepath)
 
-                os.remove(local_filepath)
-            elif os.path.exists(download_filepath):
-                os.remove(download_filepath)
+                    if not mod_name:
+                        mod_name = prefix
+
+                    if not new_version:
+                        new_version = latest_filename
+
+                    update_info.write("{} ({}): {} -> {}\n".format(mod_name, url, old_version, new_version))
+
+                    os.remove(local_filepath)
+                elif os.path.exists(download_filepath):
+                    os.remove(download_filepath)
+
+
+if __name__ == "__main__":
+    main()
