@@ -1,129 +1,127 @@
 #! /usr/bin/env python3
 
-import csv
 import glob
 import json
 import os
+import re
 import requests
 import sys
+import yaml
 import zipfile
 
 from urllib.parse import urlparse
 
 
-def get_modinfo(filename):
-    name = None
-    version = None
+class MCModInfo:
+    def __init__(self, jar_filename, pattern):
+        try:
+            zip_file = zipfile.ZipFile(jar_filename)
+            mod_info = json.loads(zip_file.read("mcmod.info"))
 
-    try:
-        zip = zipfile.ZipFile(filename)
-        mod_info = json.loads(zip.read("mcmod.info"))
+            mod_info = mod_info[0]
+        except Exception:
+            mod_info = {}
 
-        mod_info = mod_info[0]
-
-        if "name" in mod_info:
-            name = mod_info["name"]
+        self.version = None
 
         if "version" in mod_info:
-            version = mod_info["version"]
-    except Exception as exception:
-        print("Unable to read mcmod.info: {}".format(exception), file=sys.stderr)
+            self.version = mod_info["version"]
+        else:
+            # Try to get version from file pattern if it contains a wildcard character (*)
+            if "*" in pattern:
+                match = re.match(pattern.replace("*", "(.*)"), os.path.basename(jar_filename))
+                if match:
+                    self.version = match.group(1)
 
-    return name, version
+            # Use filename without .jar extension if version is still None
+            if self.version is None:
+                self.version = os.path.splitext(os.path.basename(jar_filename))[0]
 
 
-def download_file(url, local_filename):
-    print("Downloading {} to {}".format(url, local_filename))
+class Mod:
+    def __init__(self, mods_dir, data):
+        self.name: str = data["name"]
+        self.pattern: str = data["pattern"]
+        self.url: str = data["url"]
+        self.download_url: str = None
 
-    try:
-        with requests.get(url, stream=True) as response:
-            response.raise_for_status()
-            with open(local_filename, "wb") as local_file:
-                for chunk in response.iter_content(chunk_size=8192):
-                    if chunk:  # filter out keep-alive new chunks
-                        local_file.write(chunk)
+        matching_files = glob.glob(os.path.join(mods_dir, self.pattern))
+
+        if not matching_files:
+            raise RuntimeError("No files found matching pattern {}".format(self.pattern))
+        if len(matching_files) > 1:
+            raise RuntimeError("More than one file matches pattern {}".format(self.pattern))
+
+        self.filename = matching_files[0]
+
+    def check_url(self):
+        parsed_url = urlparse(self.url)
+
+        if parsed_url.netloc != "minecraft.curseforge.com":
+            print("Skipping unsupported URL: {}".format(self.url), file=sys.stderr)
+            return False
+
         return True
-    except Exception as exception:
-        print("Download failed: {}".format(exception), file=sys.stderr)
-        return False
+
+    def get_modinfo(self):
+        return MCModInfo(self.filename, self.pattern)
+
+    def get_latest_file(self):
+        response = requests.get("{}/files/latest".format(self.url), allow_redirects=False)
+
+        self.download_url = response.headers["Location"]
+
+        return os.path.basename(self.download_url)
+
+    def download(self, filename):
+        print("Downloading {} to {}".format(self.download_url, filename))
+
+        try:
+            with requests.get(self.download_url, stream=True) as response:
+                response.raise_for_status()
+                with open(filename, "wb") as local_file:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        if chunk:  # filter out keep-alive new chunks
+                            local_file.write(chunk)
+            return True
+        except Exception as exception:
+            print("Download failed: {}".format(exception), file=sys.stderr)
+            return False
 
 
 def main():
     root_dir = os.path.dirname(os.path.realpath(__file__))
     mods_dir = os.path.join(root_dir, "source", "mods")
-    latest_url_suffix = "/files/latest"
 
-    mod_list_file = os.path.join(root_dir, "mods.csv")
+    mod_list_file = os.path.join(root_dir, "mods.yaml")
     update_info_file = os.path.join(root_dir, "updated-mods.txt")
 
-    with open(mod_list_file) as csv_file:
-        mods = csv.reader(csv_file)
+    with open(mod_list_file) as mod_list_yaml:
+        mods = yaml.safe_load(mod_list_yaml)
+
+        mods = [Mod(mods_dir, mod) for mod in mods]
+        mods = [mod for mod in mods if mod.check_url()]
 
         with open(update_info_file, "w") as update_info:
-            for line_index, mod in enumerate(mods):
-                # First line contains the column headers
-                if line_index == 0:
+            for mod in mods:
+                old_version = mod.get_modinfo().version
+
+                latest_filename = mod.get_latest_file()
+
+                if latest_filename == os.path.basename(mod.filename):
+                    print("No update found for {}".format(mod.name), file=sys.stderr)
                     continue
 
-                prefix, url = mod
-
-                if not url:
-                    print("No URL defined for {}".format(prefix), file=sys.stderr)
-                    continue
-
-                parsed_url = urlparse(url)
-
-                if parsed_url.netloc != "minecraft.curseforge.com":
-                    print("Skipping non-curseforge URL: {}".format(url), file=sys.stderr)
-                    continue
-
-                file_pattern = "{}*".format(prefix)
-
-                matching_files = glob.glob(os.path.join(mods_dir, file_pattern))
-
-                if not matching_files:
-                    print("No files found matching pattern {}".format(
-                        file_pattern), file=sys.stderr)
-                    continue
-                elif len(matching_files) > 1:
-                    print("Multiple files matching pattern: {}".format(
-                        file_pattern), file=sys.stderr)
-                    continue
-
-                local_filepath = matching_files[0]
-                local_filename = os.path.basename(local_filepath)
-
-                mod_name, old_version = get_modinfo(local_filepath)
-
-                if not old_version:
-                    old_version = local_filename
-
-                response = requests.get(url + latest_url_suffix, allow_redirects=False)
-
-                download_url = response.headers["Location"]
-
-                latest_filename = os.path.basename(download_url)
-
-                if latest_filename == local_filename:
-                    print("No update found for {}".format(prefix), file=sys.stderr)
-                    continue
+                print("Update for {} found: {} -> {}".format(mod.name, os.path.basename(mod.filename), latest_filename))
 
                 download_filepath = os.path.join(mods_dir, latest_filename)
+                if mod.download(download_filepath):
+                    new_version = MCModInfo(download_filepath, mod.pattern).version
 
-                print("Update for {} found: {} -> {}".format(prefix, local_filename, latest_filename))
+                    update_info.write("{} ({}): {} -> {}\n".format(mod.name, mod.url, old_version, new_version))
 
-                if download_file(download_url, download_filepath):
-                    mod_name, new_version = get_modinfo(download_filepath)
-
-                    if not mod_name:
-                        mod_name = prefix
-
-                    if not new_version:
-                        new_version = latest_filename
-
-                    update_info.write("{} ({}): {} -> {}\n".format(mod_name, url, old_version, new_version))
-
-                    os.remove(local_filepath)
+                    # Remove old mod file
+                    os.remove(mod.filename)
                 elif os.path.exists(download_filepath):
                     os.remove(download_filepath)
 

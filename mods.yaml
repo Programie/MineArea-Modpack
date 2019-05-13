@@ -1,0 +1,219 @@
+- name: AE2 Stuff
+  pattern: ae2stuff-*.jar
+  url: https://minecraft.curseforge.com/projects/ae2-stuff
+- name: Ambient Sounds
+  pattern: AmbientSounds_*.jar
+  url: https://minecraft.curseforge.com/projects/ambientsounds
+- name: Apple Core
+  pattern: AppleCore-*.jar
+  url: https://minecraft.curseforge.com/projects/applecore
+- name: Apple Skin
+  pattern: AppleSkin-*.jar
+  url: https://minecraft.curseforge.com/projects/appleskin
+- name: Applied Energistics 2
+  pattern: appliedenergistics2-*.jar
+  url: https://minecraft.curseforge.com/projects/applied-energistics-2
+- name: Auto Plant
+  pattern: autoplant-*.jar
+  url: https://minecraft.curseforge.com/projects/autoplant
+- name: Backpacks!
+  pattern: backpacks *.jar
+  url: https://minecraft.curseforge.com/projects/backpacks
+- name: bdlib
+  pattern: bdlib-*.jar
+  url: https://minecraft.curseforge.com/projects/bdlib
+- name: Better FPS
+  pattern: BetterFps-*.jar
+  url: https://minecraft.curseforge.com/projects/betterfps
+- name: BiblioCraft
+  pattern: BiblioCraft*.jar
+  url: https://minecraft.curseforge.com/projects/bibliocraft
+- name: Biomes O Plenty
+  pattern: BiomesOPlenty-*.jar
+  url: https://minecraft.curseforge.com/projects/biomes-o-plenty
+- name: BuildCraft
+  pattern: buildcraft-all-*.jar
+  url: https://minecraft.curseforge.com/projects/buildcraft
+- name: Carpenter's Blocks
+  pattern: Carpenter's Blocks *.jar
+  url: https://www.carpentersblocks.com
+- name: MrCrayfish Furniture Mod
+  pattern: cfm-*.jar
+  url: https://mrcrayfish.com/mods?id=cfm
+- name: Chameleon
+  pattern: Chameleon-*.jar
+  url: https://minecraft.curseforge.com/projects/chameleon
+- name: Chisel
+  pattern: Chisel-*.jar
+  url: https://minecraft.curseforge.com/projects/chisel
+- name: Chisel & Bits
+  pattern: chiselsandbits-*.jar
+  url: https://minecraft.curseforge.com/projects/chisels-bits
+- name: Code Chicken Lib
+  pattern: CodeChickenLib-*.jar
+  url: https://minecraft.curseforge.com/projects/codechicken-lib-1-8
+- name: CoFH Core
+  pattern: CoFHCore-*.jar
+  url: https://minecraft.curseforge.com/projects/cofhcore
+- name: CoFH World
+  pattern: CoFHWorld-*.jar
+  url: https://minecraft.curseforge.com/projects/cofh-world
+- name: Canny Composter
+  pattern: composter-*.jar
+  url: https://minecraft.curseforge.com/projects/composter
+- name: ConnectedTexturesMod
+  pattern: CTM-*.jar
+  url: https://minecraft.curseforge.com/projects/ctm
+- name: Custom Mob Spawner
+  pattern: CustomMobSpawner-*.jar
+  url: https://www.mocreatures.org
+- name: Custom NPCs
+  pattern: CustomNPCs_*.jar
+  url: https://minecraft.curseforge.com/projects/custom-npcs
+- name: Decocraft 2
+  pattern: Decocraft-*.jar
+  url: https://minecraft.curseforge.com/projects/decocraft2
+- name: DrZhark's Mo'Creatures
+  pattern: DrZharks MoCreatures Mod-*.jar
+  url: https://www.mocreatures.org
+- name: Ender Core
+  pattern: EnderCore-*.jar
+  url: https://minecraft.curseforge.com/projects/endercore
+- name: Ender IO
+  pattern: EnderIO-*.jar
+  url: https://minecraft.curseforge.com/projects/ender-io
+- name: Extra Cells 2
+  pattern: ExtraCells-*.jar
+  url: https://minecraft.curseforge.com/projects/extracells2
+- name: Extra Utilities
+  pattern: extrautils2-*.jar
+  url: https://minecraft.curseforge.com/projects/extra-utilities
+- name: Extreme Reactors
+  pattern: ExtremeReactors-*.jar
+  url: https://minecraft.curseforge.com/projects/extreme-reactors
+- name: Flood Lights
+  pattern: FloodLights-*.jar
+  url: https://minecraft.curseforge.com/projects/floodlights
+- name: Forestry
+  pattern: forestry_*.jar
+  url: https://minecraft.curseforge.com/projects/forestry
+- name: Forgelin
+  pattern: Forgelin-*.jar
+  url: https://github.com/shadowfacts/Forgelin
+- name: Hammer (Lib) Core
+  pattern: HammerCore-*.jar
+  url: https://minecraft.curseforge.com/projects/hammer-lib
+- name: Hunger Overhaul
+  pattern: HungerOverhaul-*.jar
+  url: https://minecraft.curseforge.com/projects/hunger-overhaul
+- name: Hwyla
+  pattern: Hwyla-*.jar
+  url: https://minecraft.curseforge.com/projects/hwyla
+- name: Immersive Engineering
+  pattern: ImmersiveEngineering-*.jar
+  url: https://minecraft.curseforge.com/projects/immersive-engineering
+- name: In Control
+  pattern: incontrol-*.jar
+  url: https://minecraft.curseforge.com/projects/in-control
+- name: Industrial Foregoing
+  pattern: industrialforegoing-*.jar
+  url: https://minecraft.curseforge.com/projects/industrial-foregoing
+- name: Inventory Tweaks
+  pattern: InventoryTweaks-*.jar
+  url: https://minecraft.curseforge.com/projects/inventory-tweaks
+- name: Just Enough Items
+  pattern: jei_*.jar
+  url: https://minecraft.curseforge.com/projects/jei
+- name: Journey Map
+  pattern: journeymap-*.jar
+  url: https://minecraft.curseforge.com/projects/journeymap
+- name: Just Enough Energistics
+  pattern: JustEnoughEnergistics-*.jar
+  url: https://minecraft.curseforge.com/projects/just-enough-energistics-jee
+- name: LiteLoader
+  pattern: liteloader-*.jar
+  url: https://www.liteloader.com
+- name: Mantle
+  pattern: Mantle-*.jar
+  url: https://minecraft.curseforge.com/projects/mantle
+- name: NoMoreRecipeConflict
+  pattern: NoMoreRecipeConflict-*.jar
+  url: https://minecraft.curseforge.com/projects/stimmedcow-nomorerecipeconflict
+- name: Not Enough Items
+  pattern: NotEnoughItems-*.jar
+  url: https://minecraft.curseforge.com/projects/not-enough-items-1-8
+- name: OpenBlocks
+  pattern: OpenBlocks-*.jar
+  url: https://minecraft.curseforge.com/projects/openblocks
+- name: OpenModsLib
+  pattern: OpenModsLib-*.jar
+  url: https://minecraft.curseforge.com/projects/openmodslib
+- name: OptiFine
+  pattern: OptiFine_*.jar
+  url: https://www.optifine.net
+- name: Oreberries
+  pattern: oreberries-*.jar
+  url: https://minecraft.curseforge.com/projects/oreberries
+- name: OreDictionaryConverter
+  pattern: OreDictionaryConverter-*.jar
+  url: https://minecraft.curseforge.com/projects/oredictionaryconverter
+- name: Pam's HarvestCraft
+  pattern: Pam's HarvestCraft *.jar
+  url: https://minecraft.curseforge.com/projects/pams-harvestcraft
+- name: Placebo
+  pattern: Placebo-*.jar
+  url: https://minecraft.curseforge.com/projects/placebo
+- name: Plants
+  pattern: Plants-*.jar
+  url: https://minecraft.curseforge.com/projects/plants
+- name: PTRLib
+  pattern: PTRLib-*.jar
+  url: https://minecraft.curseforge.com/projects/ptrlib
+- name: Redstone Flux
+  pattern: RedstoneFlux-*.jar
+  url: https://minecraft.curseforge.com/projects/redstone-flux
+- name: SecretRoomsMod
+  pattern: secretroomsmod-*.jar
+  url: https://minecraft.curseforge.com/projects/secretroomsmod
+- name: Signpost
+  pattern: signpost-*.jar
+  url: https://minecraft.curseforge.com/projects/signpost
+- name: Storage Drawers
+  pattern: StorageDrawers-*.jar
+  url: https://minecraft.curseforge.com/projects/storage-drawers
+- name: Storage Drawers Extras
+  pattern: StorageDrawersExtras-*.jar
+  url: https://minecraft.curseforge.com/projects/storage-drawers-extras
+- name: Tinkers Construct
+  pattern: TConstruct-*.jar
+  url: https://minecraft.curseforge.com/projects/tinkers-construct
+- name: Terra
+  pattern: Terra *.jar
+  url:
+- name: Tesla Core Lib
+  pattern: tesla-core-lib-*.jar
+  url: https://minecraft.curseforge.com/projects/tesla-core-lib
+- name: Thermal Dynamics
+  pattern: ThermalDynamics-*.jar
+  url: https://minecraft.curseforge.com/projects/thermal-dynamics
+- name: Thermal Expansion
+  pattern: ThermalExpansion-*.jar
+  url: https://minecraft.curseforge.com/projects/thermalexpansion
+- name: Thermal Foundation
+  pattern: ThermalFoundation-*.jar
+  url: https://minecraft.curseforge.com/projects/thermal-foundation
+- name: Tinkers' Tool Leveling
+  pattern: TinkerToolLeveling-*.jar
+  url: https://minecraft.curseforge.com/projects/tinkers-tool-leveling
+- name: Underground Biomes
+  pattern: UndergroundBiomesConstructs-*.jar
+  url: https://minecraft.curseforge.com/projects/underground-biomes
+- name: Wawla
+  pattern: Wawla-*.jar
+  url: https://minecraft.curseforge.com/projects/wawla-what-are-we-looking-at
+- name: Wumple Util Library
+  pattern: wumpleutil-*.jar
+  url: https://minecraft.curseforge.com/projects/wumpleutil
+- name: ZeroCore
+  pattern: zerocore-*.jar
+  url: https://minecraft.curseforge.com/projects/zerocore
