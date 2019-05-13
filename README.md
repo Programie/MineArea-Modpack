@@ -5,10 +5,11 @@ This repository contains a few files for creating the zip files for the MineArea
 ## How to build
 
 * Download the [Minecraft Forge installer](https://files.minecraftforge.net) and put it into `source/forge`
+* Install and update mods (see section bellow)
 * Build the modpack by executing `make` in the root directory of this repository
 
-## Update mods
+## Install and update mods
 
-Execute `update-mc-mods.py` to search and download updates for all mods inside the `source/mods` folder
+Execute `update-mc-mods.py` to download all mods listed in the mods.yaml file and update existing mods.
 
-**Note:** This currently only works for mods available on CurseForge and listed in the mods.csv
+**Note:** This currently only works for mods available on CurseForge.
