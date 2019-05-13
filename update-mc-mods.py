@@ -14,6 +14,11 @@ from urllib.parse import urlparse
 
 class MCModInfo:
     def __init__(self, jar_filename, pattern):
+        self.version = None
+
+        if jar_filename is None:
+            return
+
         try:
             zip_file = zipfile.ZipFile(jar_filename)
             mod_info = json.loads(zip_file.read("mcmod.info"))
@@ -21,8 +26,6 @@ class MCModInfo:
             mod_info = mod_info[0]
         except Exception:
             mod_info = {}
-
-        self.version = None
 
         if "version" in mod_info:
             self.version = mod_info["version"]
@@ -47,12 +50,13 @@ class Mod:
 
         matching_files = glob.glob(os.path.join(mods_dir, self.pattern))
 
-        if not matching_files:
-            raise RuntimeError("No files found matching pattern {}".format(self.pattern))
         if len(matching_files) > 1:
             raise RuntimeError("More than one file matches pattern {}".format(self.pattern))
 
-        self.filename = matching_files[0]
+        if matching_files:
+            self.filename = matching_files[0]
+        else:
+            self.filename = None
 
     def check_url(self):
         parsed_url = urlparse(self.url)
@@ -108,11 +112,14 @@ def main():
 
                 latest_filename = mod.get_latest_file()
 
-                if latest_filename == os.path.basename(mod.filename):
-                    print("No update found for {}".format(mod.name), file=sys.stderr)
-                    continue
+                if mod.filename is not None:
+                    current_filename = os.path.basename(mod.filename)
 
-                print("Update for {} found: {} -> {}".format(mod.name, os.path.basename(mod.filename), latest_filename))
+                    if latest_filename == current_filename:
+                        print("No update found for {}".format(mod.name), file=sys.stderr)
+                        continue
+
+                    print("Update for {} found: {} -> {}".format(mod.name, current_filename, latest_filename))
 
                 download_filepath = os.path.join(mods_dir, latest_filename)
                 if mod.download(download_filepath):
@@ -121,7 +128,8 @@ def main():
                     update_info.write("{} ({}): {} -> {}\n".format(mod.name, mod.url, old_version, new_version))
 
                     # Remove old mod file
-                    os.remove(mod.filename)
+                    if mod.filename is not None and os.path.exists(mod.filename):
+                        os.remove(mod.filename)
                 elif os.path.exists(download_filepath):
                     os.remove(download_filepath)
 
