@@ -22,7 +22,7 @@ def get_modinfo(filename):
         mod_info = mod_info[0]
 
         if "name" in mod_info:
-            mod_name = mod_info["name"]
+            name = mod_info["name"]
         
         if "version" in mod_info:
             version = mod_info["version"]
