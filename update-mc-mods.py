@@ -142,7 +142,7 @@ def main():
 
     with open(update_info_file, "w") as update_info:
         if update_info_data["new"]:
-            update_info.write("New mods:\n\n")
+            update_info.write("New mods:\n")
             for line in update_info_data["new"]:
                 update_info.write("- {}\n".format(line))
 
@@ -150,7 +150,7 @@ def main():
             if update_info_data["new"]:
                 update_info.write("\n")
 
-            update_info.write("Updated mods:\n\n")
+            update_info.write("Updated mods:\n")
             for line in update_info_data["update"]:
                 update_info.write("- {}\n".format(line))
 
