@@ -54,7 +54,7 @@
   url: https://minecraft.curseforge.com/projects/codechicken-lib-1-8
 - name: CoFH Core
   pattern: CoFHCore-*.jar
-  url: https://minecraft.curseforge.com/projects/cofhcore
+  url: https://minecraft.curseforge.com/projects/cofh-core
 - name: CoFH World
   pattern: CoFHWorld-*.jar
   url: https://minecraft.curseforge.com/projects/cofh-world
