@@ -126,8 +126,6 @@ def main():
         mods_with_update = []
 
         for mod in mods:
-            old_version = mod.get_modinfo().version
-
             if cmd_arguments.no_update and mod.filename is not None:
                 continue
 
@@ -156,6 +154,7 @@ def main():
         for mod in mods_with_update:
             download_filepath = os.path.join(mods_dir, mod.latest_filename)
             if mod.download(download_filepath):
+                old_version = mod.get_modinfo().version
                 new_version = MCModInfo(download_filepath, mod.pattern).version
 
                 if mod.filename is None:
