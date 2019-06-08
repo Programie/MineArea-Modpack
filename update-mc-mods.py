@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import argparse
 import glob
 import json
 import os
@@ -47,6 +48,7 @@ class Mod:
         self.pattern: str = data["pattern"]
         self.url: str = data["url"]
         self.download_url: str = None
+        self.latest_filename: str = None
 
         matching_files = glob.glob(os.path.join(mods_dir, self.pattern))
 
@@ -70,14 +72,13 @@ class Mod:
     def get_modinfo(self):
         return MCModInfo(self.filename, self.pattern)
 
-    def get_latest_file(self):
+    def update_latest_file(self):
         response = requests.get("{}/files/latest".format(self.url), allow_redirects=False)
 
         response.raise_for_status()
 
         self.download_url = response.headers["Location"]
-
-        return os.path.basename(self.download_url)
+        self.latest_filename = os.path.basename(self.download_url)
 
     def download(self, filename):
         print("Downloading {} to {}".format(self.download_url, filename))
@@ -96,6 +97,12 @@ class Mod:
 
 
 def main():
+    argument_parser = argparse.ArgumentParser(description="MineArea mods updater")
+
+    argument_parser.add_argument("--no-update", help="only download new mods, do not update existing mods", action="store_true")
+
+    cmd_arguments = argument_parser.parse_args()
+
     root_dir = os.path.dirname(os.path.realpath(__file__))
     mods_dir = os.path.join(root_dir, "source", "mods")
 
@@ -116,21 +123,38 @@ def main():
         mods = [Mod(mods_dir, mod) for mod in mods]
         mods = [mod for mod in mods if mod.check_url()]
 
+        mods_with_update = []
+
         for mod in mods:
             old_version = mod.get_modinfo().version
 
-            latest_filename = mod.get_latest_file()
+            if cmd_arguments.no_update and mod.filename is not None:
+                continue
 
-            if mod.filename is not None:
+            mod.update_latest_file()
+
+            if mod.filename is None:
+                print("New mod {} found: {}".format(mod.name, mod.latest_filename))
+            else:
                 current_filename = os.path.basename(mod.filename)
 
-                if latest_filename == current_filename:
+                if mod.latest_filename == current_filename:
                     print("No update found for {}".format(mod.name), file=sys.stderr)
                     continue
 
-                print("Update for {} found: {} -> {}".format(mod.name, current_filename, latest_filename))
+                print("Update for {} found: {} -> {}".format(mod.name, current_filename, mod.latest_filename))
 
-            download_filepath = os.path.join(mods_dir, latest_filename)
+            mods_with_update.append(mod)
+
+        if not mods_with_update:
+            print("Nothing to update")
+            return
+
+        print("Ready to download {} mods".format(len(mods_with_update)))
+        input("Press Enter to continue...")
+
+        for mod in mods_with_update:
+            download_filepath = os.path.join(mods_dir, mod.latest_filename)
             if mod.download(download_filepath):
                 new_version = MCModInfo(download_filepath, mod.pattern).version
 
@@ -158,6 +182,8 @@ def main():
             update_info.write("Updated mods:\n")
             for line in update_info_data["update"]:
                 update_info.write("- {}\n".format(line))
+
+    print("Done")
 
 
 if __name__ == "__main__":
