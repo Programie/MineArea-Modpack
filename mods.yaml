@@ -52,6 +52,9 @@
 - name: Code Chicken Lib
   pattern: CodeChickenLib-*.jar
   url: https://minecraft.curseforge.com/projects/codechicken-lib-1-8
+- name: Chicken Chunks
+  pattern: ChickenChunks-*.jar
+  url: https://minecraft.curseforge.com/projects/chicken-chunks-1-8
 - name: CoFH Core
   pattern: CoFHCore-*.jar
   url: https://minecraft.curseforge.com/projects/cofh-core
