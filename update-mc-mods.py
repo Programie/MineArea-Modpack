@@ -73,6 +73,8 @@ class Mod:
     def get_latest_file(self):
         response = requests.get("{}/files/latest".format(self.url), allow_redirects=False)
 
+        response.raise_for_status()
+
         self.download_url = response.headers["Location"]
 
         return os.path.basename(self.download_url)
