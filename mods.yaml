@@ -204,7 +204,7 @@
   url: https://minecraft.curseforge.com/projects/thermal-dynamics
 - name: Thermal Expansion
   pattern: ThermalExpansion-*.jar
-  url: https://minecraft.curseforge.com/projects/thermalexpansion
+  url: https://minecraft.curseforge.com/projects/thermal-expansion
 - name: Thermal Foundation
   pattern: ThermalFoundation-*.jar
   url: https://minecraft.curseforge.com/projects/thermal-foundation
