@@ -18,11 +18,11 @@ RUN wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/downloa
 RUN groupadd -g 999 ${MINECRAFT_USER} && \
     useradd -d ${MINECRAFT_DIR} -m -u 999 -g 999 ${MINECRAFT_GROUP}
 
-COPY --chown=999:999 ./server ${MINECRAFT_DIR}
-COPY --chown=999:999 ./additional-files ${MINECRAFT_DIR}
-
 COPY ./mcrcon.py /usr/local/bin/mcrcon
 COPY ./entrypoint.sh /entrypoint.sh
+
+COPY --chown=999:999 ./server ${MINECRAFT_DIR}
+COPY --chown=999:999 ./additional-files ${MINECRAFT_DIR}
 
 RUN mv ${MINECRAFT_DIR}/forge-1.12.2-*-universal.jar ${MINECRAFT_DIR}/minecraftforge.jar
 
