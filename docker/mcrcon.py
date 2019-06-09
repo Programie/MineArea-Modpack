@@ -32,37 +32,34 @@ rcon_host = "localhost"
 rcon_port = int(server_properties["rcon.port"])
 rcon_password = server_properties["rcon.password"]
 
-rcon = MCRcon(host=rcon_host, port=rcon_port, password=rcon_password)
+with MCRcon(host=rcon_host, port=rcon_port, password=rcon_password) as rcon:
+    if len(sys.argv) < 2:
+        if os.isatty(sys.stdout.fileno()):
+            if os.path.isfile(history_file):
+                readline.read_history_file(history_file)
 
-rcon.connect()
+            try:
+                while True:
+                    command = input("{}:{} > ".format(rcon_host, rcon_port)).strip()
 
-if len(sys.argv) < 2:
-    if os.isatty(sys.stdout.fileno()):
-        if os.path.isfile(history_file):
-            readline.read_history_file(history_file)
+                    if not command:
+                        continue
 
-        try:
-            while True:
-                command = input("{}:{} > ".format(rcon_host, rcon_port)).strip()
+                    command_lower = command.lower()
+                    if command_lower == "quit" or command_lower == "exit":
+                        break
 
-                if not command:
-                    continue
+                    response = rcon.command(command)
+                    if response:
+                        print(response, end="\n")
+            except (EOFError, KeyboardInterrupt):
+                pass
+            finally:
+                readline.write_history_file(history_file)
 
-                command_lower = command.lower()
-                if command_lower == "quit" or command_lower == "exit":
-                    break
-
-                response = rcon.command(command)
-                if response:
-                    print(response, end="\n")
-        except (EOFError, KeyboardInterrupt):
-            pass
-        finally:
-            readline.write_history_file(history_file)
-
-            rcon.disconnect()
+                rcon.disconnect()
+        else:
+            print("Usage: {} <command>".format(sys.argv[0]), file=sys.stderr)
+            exit(1)
     else:
-        print("Usage: {} <command>".format(sys.argv[0]), file=sys.stderr)
-        exit(1)
-else:
-    print(rcon.command(" ".join(sys.argv[1:])))
+        print(rcon.command(" ".join(sys.argv[1:])))
