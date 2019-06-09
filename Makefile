@@ -3,10 +3,11 @@ forge_dir = $(source_dir)/forge
 target_dir = target
 client_dir = $(target_dir)/client
 server_dir = $(target_dir)/server
+docker_dir = docker
 
 all: install-forge client server
 
-.PHONY: clean install-forge client server
+.PHONY: clean install-forge client server server-docker
 
 clean:
 	rm -rf $(target_dir)
@@ -31,3 +32,7 @@ server:
 	rsync -av --delete $(forge_dir)/libraries/ $(server_dir)/libraries/
 	rsync -av --delete --exclude-from server-mods.rsync-exclude $(source_dir)/mods/ $(server_dir)/mods/
 	cd $(server_dir) && zip -r -FS ../minearea-1.12.2-server.zip .
+
+server-docker: server
+	rsync -av --delete $(server_dir)/ $(docker_dir)/server/
+	docker build -t programie/minearea-mc-server $(docker_dir)

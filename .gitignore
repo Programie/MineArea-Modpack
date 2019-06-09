@@ -1,4 +1,5 @@
 .idea
+/docker/server
 /source/mods
 /target
 /updated-mods.txt
