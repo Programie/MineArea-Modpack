@@ -158,9 +158,9 @@ def main():
                 new_version = MCModInfo(download_filepath, mod.pattern).version
 
                 if mod.filename is None:
-                    update_info_data["new"].append("{} ({})".format(mod.name, mod.url))
+                    update_info_data["new"].append("[{}]({})".format(mod.name, mod.url))
                 else:
-                    update_info_data["update"].append("{} ({}): {} -> {}".format(mod.name, mod.url, old_version, new_version))
+                    update_info_data["update"].append("[{}]({}): {} -> {}".format(mod.name, mod.url, old_version, new_version))
 
                 # Remove old mod file
                 if mod.filename is not None and os.path.exists(mod.filename):
