@@ -82,6 +82,12 @@
 - name: DrZhark's Mo'Creatures
   pattern: DrZharks MoCreatures Mod-*.jar
   url: https://www.mocreatures.org
+- name: DynmapForge
+  pattern: Dynmap-*.jar
+  url: https://minecraft.curseforge.com/projects/dynmapforge
+- name: DynmapBlockScan
+  pattern: DynmapBlockScan-*.jar
+  url: http://www.dynmap.us/releases/
 - name: Ender Core
   pattern: EnderCore-*.jar
   url: https://minecraft.curseforge.com/projects/endercore
@@ -142,6 +148,9 @@
 - name: Mantle
   pattern: Mantle-*.jar
   url: https://minecraft.curseforge.com/projects/mantle
+- name: MatterLink
+  pattern: MatterLink-*.jar
+  url: https://minecraft.curseforge.com/projects/matterlink
 - name: NoMoreRecipeConflict
   pattern: NoMoreRecipeConflict-*.jar
   url: https://minecraft.curseforge.com/projects/stimmedcow-nomorerecipeconflict

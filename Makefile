@@ -20,7 +20,7 @@ client:
 	mkdir -p $(client_dir)/bin $(client_dir)/config $(client_dir)/mods
 	cp $(forge_dir)/forge-1.12.2-*-universal.jar $(client_dir)/bin/modpack.jar
 	rsync -av --delete $(source_dir)/config/ $(client_dir)/config/
-	rsync -av --delete $(source_dir)/mods/ $(client_dir)/mods/
+	rsync -av --delete --exclude-from client-mods.rsync-exclude $(source_dir)/mods/ $(client_dir)/mods/
 	cd $(client_dir) && zip -r -FS ../minearea-1.12.2.zip .
 
 server:
