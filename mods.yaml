@@ -7,13 +7,13 @@
 - name: Apple Core
   pattern: AppleCore-*.jar
   url: https://minecraft.curseforge.com/projects/applecore
-- name: Apple Skin
+- name: AppleSkin
   pattern: AppleSkin-*.jar
   url: https://minecraft.curseforge.com/projects/appleskin
 - name: Applied Energistics 2
   pattern: appliedenergistics2-*.jar
   url: https://minecraft.curseforge.com/projects/applied-energistics-2
-- name: Auto Plant
+- name: AutoPlant
   pattern: autoplant-*.jar
   url: https://minecraft.curseforge.com/projects/autoplant
 - name: Backpacks!
@@ -43,6 +43,9 @@
 - name: Chameleon
   pattern: Chameleon-*.jar
   url: https://minecraft.curseforge.com/projects/chameleon
+- name: Chat Bubbles
+  pattern: mod_chatBubbles-*.litemod
+  url: https://minecraft.curseforge.com/projects/chat-bubbles
 - name: Chisel
   pattern: Chisel-*.jar
   url: https://minecraft.curseforge.com/projects/chisel
@@ -94,7 +97,7 @@
 - name: Ender IO
   pattern: EnderIO-*.jar
   url: https://minecraft.curseforge.com/projects/ender-io
-- name: Extra Cells 2
+- name: ExtraCells2
   pattern: ExtraCells-*.jar
   url: https://minecraft.curseforge.com/projects/extracells2
 - name: Extra Utilities
@@ -139,7 +142,7 @@
 - name: Journey Map
   pattern: journeymap-*.jar
   url: https://minecraft.curseforge.com/projects/journeymap
-- name: Just Enough Energistics
+- name: Just Enough Energistics (JEE)
   pattern: JustEnoughEnergistics-*.jar
   url: https://minecraft.curseforge.com/projects/just-enough-energistics-jee
 - name: LiteLoader
