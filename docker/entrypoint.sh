@@ -1,21 +1,11 @@
 #! /bin/bash
 
-(
-    cd /usr/src/minecraft && \
-    rsync \
-          -a \
-          --delete \
-          libraries \
-          mods \
-          ${MINECRAFT_DIR} && \
-    rsync \
-          -a \
-          config \
-          eula.txt \
-          minecraftforge.jar \
-          minecraft_server.1.12.2.jar \
-          ${MINECRAFT_DIR}
-)
+rsync -a --exclude server.properties /usr/src/minecraft/ ${MINECRAFT_DIR}/
+
+rsync -a --delete \
+      /usr/src/minecraft/libraries \
+      /usr/src/minecraft/mods \
+      ${MINECRAFT_DIR}
 
 if [[ ! -e ${MINECRAFT_DIR}/server.properties ]]; then
     cp /usr/src/minecraft/server.properties ${MINECRAFT_DIR}/server.properties
