@@ -1,5 +1,26 @@
 #! /bin/bash
 
+(
+    cd /usr/src/minecraft && \
+    rsync \
+          -a \
+          --delete \
+          libraries \
+          mods \
+          ${MINECRAFT_DIR} && \
+    rsync \
+          -a \
+          config \
+          eula.txt \
+          minecraftforge.jar \
+          minecraft_server.1.12.2.jar \
+          ${MINECRAFT_DIR}
+)
+
+if [[ ! -e ${MINECRAFT_DIR}/server.properties ]]; then
+    cp /usr/src/minecraft/server.properties ${MINECRAFT_DIR}/server.properties
+fi
+
 find ${MINECRAFT_DIR} \! -user ${MINECRAFT_USER} -exec chown ${MINECRAFT_USER}:${MINECRAFT_GROUP} '{}' +
 
 case "$1" in
