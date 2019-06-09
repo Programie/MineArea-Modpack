@@ -7,6 +7,7 @@ This repository contains a few files for creating the zip files for the MineArea
 * Download the [Minecraft Forge installer](https://files.minecraftforge.net) and put it into `source/forge`
 * Install and update mods (see section bellow)
 * Build the modpack by executing `make` in the root directory of this repository
+* Optional: Build the Docker image for the Minecraft server using `make server-docker`
 
 ## Install and update mods
 
