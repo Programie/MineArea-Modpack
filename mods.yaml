@@ -49,9 +49,11 @@
 - name: Carpenter's Blocks
   pattern: Carpenter's Blocks *.jar
   url: https://www.carpentersblocks.com
+  download_url: null
 - name: MrCrayfish Furniture Mod
   pattern: cfm-*.jar
   url: https://mrcrayfish.com/mods?id=cfm
+  download_url: null
 - name: Chameleon
   pattern: Chameleon-*.jar
   url: https://minecraft.curseforge.com/projects/chameleon
@@ -99,6 +101,7 @@
 - name: Custom Mob Spawner
   pattern: CustomMobSpawner-*.jar
   url: https://www.mocreatures.org
+  download_url: null
 - name: Custom NPCs
   pattern: CustomNPCs_*.jar
   url: https://minecraft.curseforge.com/projects/custom-npcs
@@ -110,6 +113,7 @@
 - name: DrZhark's Mo'Creatures
   pattern: DrZharks MoCreatures Mod-*.jar
   url: https://www.mocreatures.org
+  download_url: null
 - name: DynmapForge
   pattern: Dynmap-*.jar
   url: https://minecraft.curseforge.com/projects/dynmapforge
@@ -117,6 +121,7 @@
 - name: DynmapBlockScan
   pattern: DynmapBlockScan-*.jar
   url: http://www.dynmap.us/releases/
+  download_url: null
 - name: Ender Core
   pattern: EnderCore-*.jar
   url: https://minecraft.curseforge.com/projects/endercore
@@ -148,6 +153,7 @@
 - name: Forgelin
   pattern: Forgelin-*.jar
   url: https://github.com/shadowfacts/Forgelin
+  download_url: null
 - name: Hammer (Lib) Core
   pattern: HammerCore-*.jar
   url: https://minecraft.curseforge.com/projects/hammer-lib
@@ -191,6 +197,7 @@
 - name: LiteLoader
   pattern: liteloader-*.jar
   url: https://www.liteloader.com
+  download_url: null
 - name: Mantle
   pattern: Mantle-*.jar
   url: https://minecraft.curseforge.com/projects/mantle
@@ -218,6 +225,7 @@
 - name: OptiFine
   pattern: OptiFine_*.jar
   url: https://www.optifine.net
+  download_url: null
 - name: Oreberries
   pattern: oreberries-*.jar
   url: https://minecraft.curseforge.com/projects/oreberries
@@ -274,6 +282,7 @@
 - name: Terra
   pattern: Terra *.jar
   url: https://github.com/TheKiipster/Terra
+  download_url: null
 - name: Tesla Core Lib
   pattern: tesla-core-lib-*.jar
   url: https://minecraft.curseforge.com/projects/tesla-core-lib

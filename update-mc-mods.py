@@ -68,11 +68,9 @@ class Mod:
         yaml_data = {
             "name": self.name,
             "pattern": self.pattern,
-            "url": self.url
+            "url": self.url,
+            "download_url": self.download_url
         }
-
-        if self.download_url:
-            yaml_data["download_url"] = self.download_url
 
         return yaml_data
 
