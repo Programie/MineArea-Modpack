@@ -50,7 +50,7 @@ class Mod:
         self.download_url: str = None
         self.latest_filename: str = None
 
-        if "download_url" in data and data["download_url"]:
+        if "download_url" in data and data["download_url"] is not None:
             self.download_url = data["download_url"]
             self.latest_filename = os.path.basename(self.download_url)
 
@@ -139,7 +139,7 @@ def main():
         mods_with_update = []
 
         for mod in mods:
-            if cmd_arguments.no_update and mod.download_url and mod.filename is None:
+            if cmd_arguments.no_update and mod.download_url is not None and mod.filename is None:
                 mods_with_update.append(mod)
                 continue
 
