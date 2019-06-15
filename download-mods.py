@@ -54,7 +54,7 @@ class Mod:
 
         if "download_url" in data and data["download_url"] is not None:
             self.download_url = data["download_url"]
-            self.latest_filename = os.path.basename(unquote(self.download_url))
+            self.set_latest_file_from_download_url()
 
         if "md5" in data:
             self.md5 = data["md5"]
@@ -92,13 +92,16 @@ class Mod:
     def get_modinfo(self):
         return MCModInfo(self.filename, self.pattern)
 
+    def set_latest_file_from_download_url(self):
+        self.latest_filename = os.path.basename(unquote(urlparse(self.download_url).path).replace("+", " "))
+
     def update_latest_file(self):
         response = requests.get("{}/files/latest".format(self.url), allow_redirects=False)
 
         response.raise_for_status()
 
         self.download_url = response.headers["Location"]
-        self.latest_filename = os.path.basename(unquote(self.download_url))
+        self.set_latest_file_from_download_url()
 
     def download(self, filename):
         print("Downloading {} to {}".format(self.download_url, filename))
