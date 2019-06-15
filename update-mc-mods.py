@@ -113,7 +113,7 @@ class Mod:
 def main():
     argument_parser = argparse.ArgumentParser(description="MineArea mods updater")
 
-    argument_parser.add_argument("--no-update", help="only download new mods, do not update existing mods", action="store_true")
+    argument_parser.add_argument("--no-update", help="only download new or missing mods, do not update existing mods", action="store_true")
 
     cmd_arguments = argument_parser.parse_args()
 
@@ -139,6 +139,10 @@ def main():
         mods_with_update = []
 
         for mod in mods:
+            if cmd_arguments.no_update and mod.download_url and mod.filename is None:
+                mods_with_update.append(mod)
+                continue
+
             if not mod.check_url():
                 continue
 
@@ -175,7 +179,7 @@ def main():
 
                 if mod.filename is None:
                     update_info_data["new"].append("[{}]({})".format(mod.name, mod.url))
-                else:
+                elif not cmd_arguments.no_update:
                     update_info_data["update"].append("[{}]({}): {} -> {}".format(mod.name, mod.url, old_version, new_version))
 
                 # Remove old mod file
