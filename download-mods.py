@@ -11,7 +11,7 @@ import sys
 import yaml
 import zipfile
 
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 
 class MCModInfo:
@@ -54,7 +54,7 @@ class Mod:
 
         if "download_url" in data and data["download_url"] is not None:
             self.download_url = data["download_url"]
-            self.latest_filename = os.path.basename(self.download_url)
+            self.latest_filename = os.path.basename(unquote(self.download_url))
 
         if "md5" in data:
             self.md5 = data["md5"]
@@ -98,7 +98,7 @@ class Mod:
         response.raise_for_status()
 
         self.download_url = response.headers["Location"]
-        self.latest_filename = os.path.basename(self.download_url)
+        self.latest_filename = os.path.basename(unquote(self.download_url))
 
     def download(self, filename):
         print("Downloading {} to {}".format(self.download_url, filename))
