@@ -50,6 +50,10 @@ class Mod:
         self.download_url: str = None
         self.latest_filename: str = None
 
+        if "download_url" in data and data["download_url"]:
+            self.download_url = data["download_url"]
+            self.latest_filename = os.path.basename(self.download_url)
+
         matching_files = glob.glob(os.path.join(mods_dir, self.pattern))
 
         if len(matching_files) > 1:
@@ -59,6 +63,18 @@ class Mod:
             self.filename = matching_files[0]
         else:
             self.filename = None
+
+    def to_yaml(self):
+        yaml_data = {
+            "name": self.name,
+            "pattern": self.pattern,
+            "url": self.url
+        }
+
+        if self.download_url:
+            yaml_data["download_url"] = self.download_url
+
+        return yaml_data
 
     def check_url(self):
         parsed_url = urlparse(self.url)
@@ -121,11 +137,13 @@ def main():
         mods = yaml.safe_load(mod_list_yaml)
 
         mods = [Mod(mods_dir, mod) for mod in mods]
-        mods = [mod for mod in mods if mod.check_url()]
 
         mods_with_update = []
 
         for mod in mods:
+            if not mod.check_url():
+                continue
+
             if cmd_arguments.no_update and mod.filename is not None:
                 continue
 
@@ -167,6 +185,15 @@ def main():
                     os.remove(mod.filename)
             elif os.path.exists(download_filepath):
                 os.remove(download_filepath)
+
+    # Dump any changes to the YAML structure (e.g. new download_url) back to the mods.yaml file
+    with open(mod_list_file, "w") as mod_list_yaml:
+        yaml_list = []
+
+        for mod in mods:
+            yaml_list.append(mod.to_yaml())
+
+        yaml.dump(yaml_list, mod_list_yaml, default_flow_style=False, sort_keys=False)
 
     with open(update_info_file, "w") as update_info:
         if update_info_data["new"]:
