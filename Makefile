@@ -5,9 +5,9 @@ client_dir = $(target_dir)/client
 server_dir = $(target_dir)/server
 docker_dir = docker
 
-all: install-forge client server
+all: install-forge download-mods client server
 
-.PHONY: clean install-forge client server server-docker
+.PHONY: clean install-forge download-mods client server server-docker
 
 clean:
 	rm -rf $(target_dir)
@@ -15,6 +15,9 @@ clean:
 install-forge:
 	mkdir -p $(forge_dir)
 	cd $(forge_dir) && java -jar forge-*-installer.jar --installServer
+
+download-mods:
+	./download-mods.py
 
 client:
 	mkdir -p $(client_dir)/bin $(client_dir)/config $(client_dir)/mods

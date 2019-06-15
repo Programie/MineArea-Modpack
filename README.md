@@ -11,8 +11,10 @@ This repository contains a few files for creating the zip files for the MineArea
 
 ## Install and update mods
 
-Execute `update-mc-mods.py` to download all mods listed in the mods.yaml file and update existing mods.
+Execute `download-mods.py` to download all mods listed in the mods.yaml file.
+
+In case you want to update the mods, specify the `--update` option: `download-mods.py --update`
 
 **Note:** This currently only works for mods available on CurseForge.
 
-Don't forget to update the [change log](CHANGES.md).
+Don't forget to update the [change log](CHANGES.md) after updating the mods (use the information from the updated-mods.txt file).

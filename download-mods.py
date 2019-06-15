@@ -141,9 +141,9 @@ def md5file(filename):
 
 
 def main():
-    argument_parser = argparse.ArgumentParser(description="MineArea mods updater")
+    argument_parser = argparse.ArgumentParser(description="MineArea mods downloader")
 
-    argument_parser.add_argument("--no-update", help="only download new or missing mods, do not update existing mods", action="store_true")
+    argument_parser.add_argument("--update", help="update all mods to their latest versions", action="store_true")
 
     cmd_arguments = argument_parser.parse_args()
 
@@ -166,17 +166,17 @@ def main():
 
         mods = [Mod(mods_dir, mod) for mod in mods]
 
-        mods_with_update = []
+        mods_to_download = []
 
         for mod in mods:
-            if cmd_arguments.no_update and mod.download_url is not None and not mod.is_file_valid():
-                mods_with_update.append(mod)
+            if not cmd_arguments.update and mod.download_url is not None and not mod.is_file_valid():
+                mods_to_download.append(mod)
                 continue
 
             if not mod.check_url():
                 continue
 
-            if cmd_arguments.no_update and mod.filename is not None:
+            if not cmd_arguments.update and mod.filename is not None:
                 continue
 
             mod.update_latest_file()
@@ -192,16 +192,16 @@ def main():
 
                 print("Update for {} found: {} -> {}".format(mod.name, current_filename, mod.latest_filename))
 
-            mods_with_update.append(mod)
+            mods_to_download.append(mod)
 
-        if not mods_with_update:
-            print("Nothing to update")
+        if not mods_to_download:
+            print("Nothing to download")
             return
 
-        print("Ready to download {} mods".format(len(mods_with_update)))
+        print("Ready to download {} mods".format(len(mods_to_download)))
         input("Press Enter to continue...")
 
-        for mod in mods_with_update:
+        for mod in mods_to_download:
             download_filepath = os.path.join(mods_dir, mod.latest_filename)
             if mod.download(download_filepath):
                 old_version = mod.get_modinfo().version
@@ -209,7 +209,7 @@ def main():
 
                 if mod.filename is None:
                     update_info_data["new"].append("[{}]({})".format(mod.name, mod.url))
-                elif not cmd_arguments.no_update:
+                elif cmd_arguments.update:
                     update_info_data["update"].append("[{}]({}): {} -> {}".format(mod.name, mod.url, old_version, new_version))
 
                 # Remove old mod file
@@ -218,11 +218,12 @@ def main():
 
                 md5 = md5file(download_filepath)
 
-                if cmd_arguments.no_update:
+                if cmd_arguments.update:
+                    mod.md5 = md5
+                else:
                     if mod.md5 is not None and mod.md5 != md5:
                         print("Warning: MD5 checksum of downloaded file does not match stored MD5 checksum!")
-                else:
-                    mod.md5 = md5
+
             elif os.path.exists(download_filepath):
                 os.remove(download_filepath)
 
