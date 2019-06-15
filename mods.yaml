@@ -61,13 +61,13 @@
 - name: Carpenter's Blocks
   pattern: Carpenter's Blocks *.jar
   url: https://www.carpentersblocks.com
-  download_url: null
-  md5: null
+  download_url: http://carpentersblocks1.website/downloads/Carpenter's%20Blocks%20v3.4.0-poc.6%20-%20MC%201.12.2.jar
+  md5: e3c9920922ac3261adb7d239ae236a88
 - name: MrCrayfish Furniture Mod
   pattern: cfm-*.jar
   url: https://mrcrayfish.com/mods?id=cfm
-  download_url: null
-  md5: null
+  download_url: https://www.dropbox.com/s/p2cfs9x8gcytxal/cfm-6.3.0-mc1.12.2.jar?dl=1
+  md5: b1e5c79ed6e9e4602f25419e21497975
 - name: Chameleon
   pattern: Chameleon-*.jar
   url: https://minecraft.curseforge.com/projects/chameleon
@@ -126,8 +126,8 @@
 - name: Custom Mob Spawner
   pattern: CustomMobSpawner-*.jar
   url: https://www.mocreatures.org
-  download_url: null
-  md5: null
+  download_url: http://download1779.mediafire.com/ak2ibpfmmc3g/48n1ixz8i2belv2/CustomMobSpawner-3.11.4.jar
+  md5: cd52040afaf2cf8b50da6d9bb9909188
 - name: Custom NPCs
   pattern: CustomNPCs_*.jar
   url: https://minecraft.curseforge.com/projects/custom-npcs
@@ -141,8 +141,8 @@
 - name: DrZhark's Mo'Creatures
   pattern: DrZharks MoCreatures Mod-*.jar
   url: https://www.mocreatures.org
-  download_url: null
-  md5: null
+  download_url: http://download2260.mediafire.com/io2491qfrzpg/rcu6qcffrtzg554/DrZharks+MoCreatures+Mod-12.0.5.jar
+  md5: b02c58883f3d2956017639c6000d071e
 - name: DynmapForge
   pattern: Dynmap-*.jar
   url: https://minecraft.curseforge.com/projects/dynmapforge
@@ -151,8 +151,8 @@
 - name: DynmapBlockScan
   pattern: DynmapBlockScan-*.jar
   url: http://www.dynmap.us/releases/
-  download_url: null
-  md5: null
+  download_url: http://www.dynmap.us/releases/DynmapBlockScan-3.0-beta-1-forge-1.12.2.jar
+  md5: 8dfe0d6eb493db1e281fe78e576e57bc
 - name: Ender Core
   pattern: EnderCore-*.jar
   url: https://minecraft.curseforge.com/projects/endercore
@@ -191,8 +191,8 @@
 - name: Forgelin
   pattern: Forgelin-*.jar
   url: https://github.com/shadowfacts/Forgelin
-  download_url: null
-  md5: null
+  download_url: https://github.com/shadowfacts/Forgelin/releases/download/1.8.2/Forgelin-1.8.2.jar
+  md5: 59035365f7af35f599d1c4baade64d8b
 - name: Hammer (Lib) Core
   pattern: HammerCore-*.jar
   url: https://minecraft.curseforge.com/projects/hammer-lib
@@ -246,8 +246,8 @@
 - name: LiteLoader
   pattern: liteloader-*.jar
   url: https://www.liteloader.com
-  download_url: null
-  md5: null
+  download_url: http://jenkins.liteloader.com/view/1.12.2/job/LiteLoader%201.12.2/lastSuccessfulBuild/artifact/build/libs/liteloader-1.12.2-SNAPSHOT-release.jar
+  md5: 1420785ecbfed5aff4a586c5c9dd97eb
 - name: Mantle
   pattern: Mantle-*.jar
   url: https://minecraft.curseforge.com/projects/mantle
