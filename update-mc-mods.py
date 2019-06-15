@@ -2,6 +2,7 @@
 
 import argparse
 import glob
+import hashlib
 import json
 import os
 import re
@@ -49,10 +50,14 @@ class Mod:
         self.url: str = data["url"]
         self.download_url: str = None
         self.latest_filename: str = None
+        self.md5: str = None
 
         if "download_url" in data and data["download_url"] is not None:
             self.download_url = data["download_url"]
             self.latest_filename = os.path.basename(self.download_url)
+
+        if "md5" in data:
+            self.md5 = data["md5"]
 
         matching_files = glob.glob(os.path.join(mods_dir, self.pattern))
 
@@ -69,7 +74,8 @@ class Mod:
             "name": self.name,
             "pattern": self.pattern,
             "url": self.url,
-            "download_url": self.download_url
+            "download_url": self.download_url,
+            "md5": self.md5
         }
 
         return yaml_data
@@ -109,6 +115,30 @@ class Mod:
             print("Download failed: {}".format(exception), file=sys.stderr)
             return False
 
+    def is_file_valid(self):
+        if self.filename is None:
+            return False
+
+        if self.md5 is not None and md5file(self.filename) != self.md5:
+            return None
+
+        return True
+
+
+def md5file(filename):
+    md5 = hashlib.md5()
+
+    with open(filename, "rb") as file:
+        while True:
+            data = file.read(65536)
+
+            if not data:
+                break
+
+            md5.update(data)
+
+    return md5.hexdigest()
+
 
 def main():
     argument_parser = argparse.ArgumentParser(description="MineArea mods updater")
@@ -139,7 +169,7 @@ def main():
         mods_with_update = []
 
         for mod in mods:
-            if cmd_arguments.no_update and mod.download_url is not None and mod.filename is None:
+            if cmd_arguments.no_update and mod.download_url is not None and not mod.is_file_valid():
                 mods_with_update.append(mod)
                 continue
 
@@ -185,6 +215,14 @@ def main():
                 # Remove old mod file
                 if mod.filename is not None and os.path.exists(mod.filename):
                     os.remove(mod.filename)
+
+                md5 = md5file(download_filepath)
+
+                if cmd_arguments.no_update:
+                    if mod.md5 is not None and mod.md5 != md5:
+                        print("Warning: MD5 checksum of downloaded file does not match stored MD5 checksum!")
+                else:
+                    mod.md5 = md5
             elif os.path.exists(download_filepath):
                 os.remove(download_filepath)
 
