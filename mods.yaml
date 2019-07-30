@@ -291,8 +291,8 @@
 - name: OreDictionaryConverter
   pattern: OreDictionaryConverter-*.jar
   url: https://minecraft.curseforge.com/projects/oredictionaryconverter
-  download_url: https://edge.forgecdn.net/files/2355/107/OreDictionaryConverter-1.10.0.jar
-  md5: d1c425eb6552c020f5e984d4eb27ef85
+  download_url: https://github.com/Brycey92/OreDictionaryConverter/releases/download/1.11.0/OreDictionaryConverter-1.11.0.jar
+  md5: a3340c074fb054d069b03d03374b8e0b
 - name: Pam's HarvestCraft
   pattern: Pam's HarvestCraft *.jar
   url: https://minecraft.curseforge.com/projects/pams-harvestcraft
