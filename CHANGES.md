@@ -1,6 +1,6 @@
 # Changes
 
-## 1.14 (pending)
+## 1.14 (2019-07-31)
 
 Updated mods:
 - [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2): rv6-stable-6 -> rv6-stable-7
