@@ -1,61 +1,61 @@
 - name: AE2 Stuff
   pattern: ae2stuff-*.jar
-  url: https://minecraft.curseforge.com/projects/ae2-stuff
+  url: https://www.curseforge.com/minecraft/mc-mods/ae2-stuff
   download_url: https://edge.forgecdn.net/files/2491/32/ae2stuff-0.7.0.4-mc1.12.2.jar
   md5: 8594b7501c1ecc1bdaaa8ef42b7dbdda
 - name: Ambient Sounds
   pattern: AmbientSounds_*.jar
-  url: https://minecraft.curseforge.com/projects/ambientsounds
+  url: https://www.curseforge.com/minecraft/mc-mods/ambientsounds
   download_url: https://edge.forgecdn.net/files/2709/223/AmbientSounds_v3.0.9_mc1.12.2.jar
   md5: a050bc219e9cace2b49b87191f5199bb
 - name: Apple Core
   pattern: AppleCore-*.jar
-  url: https://minecraft.curseforge.com/projects/applecore
+  url: https://www.curseforge.com/minecraft/mc-mods/applecore
   download_url: https://edge.forgecdn.net/files/2679/415/AppleCore-mc1.12.2-3.2.0.jar
   md5: 1cbb68f6f8e55dbbe525dd8d90f86d1f
 - name: AppleSkin
   pattern: AppleSkin-*.jar
-  url: https://minecraft.curseforge.com/projects/appleskin
+  url: https://www.curseforge.com/minecraft/mc-mods/appleskin
   download_url: https://edge.forgecdn.net/files/2496/585/AppleSkin-mc1.12-1.0.9.jar
   md5: 0e0af1e6f80ea2ee7ecfc2f8f44b897b
 - name: Applied Energistics 2
   pattern: appliedenergistics2-*.jar
-  url: https://minecraft.curseforge.com/projects/applied-energistics-2
+  url: https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
   download_url: https://edge.forgecdn.net/files/2652/453/appliedenergistics2-rv6-stable-6.jar
   md5: 9c7b1b142d9676cec4f92b7e07ac3cd9
 - name: AutoPlant
   pattern: autoplant-*.jar
-  url: https://minecraft.curseforge.com/projects/autoplant
+  url: https://www.curseforge.com/minecraft/mc-mods/autoplant
   download_url: https://edge.forgecdn.net/files/2432/151/autoplant-1.12-1.0.0.jar
   md5: 257ce30165cc71aca72cb5f288b10f1b
 - name: Backpacks!
   pattern: backpacks *.jar
-  url: https://minecraft.curseforge.com/projects/backpacks
+  url: https://www.curseforge.com/minecraft/mc-mods/backpacks
   download_url: https://edge.forgecdn.net/files/2717/606/backpacks 1.12.2 - 3.5.6.jar
   md5: 919cf581397fcbc6eae25144512fa4ed
 - name: bdlib
   pattern: bdlib-*.jar
-  url: https://minecraft.curseforge.com/projects/bdlib
+  url: https://www.curseforge.com/minecraft/mc-mods/bdlib
   download_url: https://edge.forgecdn.net/files/2518/31/bdlib-1.14.3.12-mc1.12.2.jar
   md5: d2b8ba08414ac12737eb5ecbf92a19d9
 - name: Better FPS
   pattern: BetterFps-*.jar
-  url: https://minecraft.curseforge.com/projects/betterfps
+  url: https://www.curseforge.com/minecraft/mc-mods/betterfps
   download_url: https://edge.forgecdn.net/files/2483/393/BetterFps-1.4.8.jar
   md5: d36f4d3c0f96e99a9a1ad2e8eeda1fc4
 - name: BiblioCraft
   pattern: BiblioCraft*.jar
-  url: https://minecraft.curseforge.com/projects/bibliocraft
+  url: https://www.curseforge.com/minecraft/mc-mods/bibliocraft
   download_url: https://edge.forgecdn.net/files/2574/880/BiblioCraft[v2.4.5][MC1.12.2].jar
   md5: 5b9f1a1543a1fdf687fe4761e3d63ed4
 - name: Biomes O Plenty
   pattern: BiomesOPlenty-*.jar
-  url: https://minecraft.curseforge.com/projects/biomes-o-plenty
+  url: https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
   download_url: https://edge.forgecdn.net/files/2711/162/BiomesOPlenty-1.12.2-7.0.1.2439-universal.jar
   md5: 5045685c0b7c23362a54a080588d4de2
 - name: BuildCraft
   pattern: buildcraft-all-*.jar
-  url: https://minecraft.curseforge.com/projects/buildcraft
+  url: https://www.curseforge.com/minecraft/mc-mods/buildcraft
   download_url: https://edge.forgecdn.net/files/2702/41/buildcraft-all-7.99.24.1.jar
   md5: 45e9e731ce4acdd54d84b1851216b184
 - name: Carpenter's Blocks
@@ -70,57 +70,57 @@
   md5: b1e5c79ed6e9e4602f25419e21497975
 - name: Chameleon
   pattern: Chameleon-*.jar
-  url: https://minecraft.curseforge.com/projects/chameleon
+  url: https://www.curseforge.com/minecraft/mc-mods/chameleon
   download_url: https://edge.forgecdn.net/files/2450/900/Chameleon-1.12-4.1.3.jar
   md5: e42efa8f4fd42d2918128a826b740e98
 - name: Chat Bubbles
   pattern: mod_chatBubbles-*.litemod
-  url: https://minecraft.curseforge.com/projects/chat-bubbles
+  url: https://www.curseforge.com/minecraft/mc-mods/chat-bubbles
   download_url: https://edge.forgecdn.net/files/2642/575/mod_chatBubbles-1.0.1_for_1.12.2.litemod
   md5: 207fe40c032590f478a32270ace698e5
 - name: Chisel
   pattern: Chisel-*.jar
-  url: https://minecraft.curseforge.com/projects/chisel
+  url: https://www.curseforge.com/minecraft/mc-mods/chisel
   download_url: https://edge.forgecdn.net/files/2619/468/Chisel-MC1.12.2-0.2.1.35.jar
   md5: dbda5475859bcffc9f572c5a1506a1f4
 - name: Chisel & Bits
   pattern: chiselsandbits-*.jar
-  url: https://minecraft.curseforge.com/projects/chisels-bits
+  url: https://www.curseforge.com/minecraft/mc-mods/chisels-bits
   download_url: https://edge.forgecdn.net/files/2720/655/chiselsandbits-14.33.jar
   md5: e056e23559965f2ebabf47aad0fe51a3
 - name: Code Chicken Lib
   pattern: CodeChickenLib-*.jar
-  url: https://minecraft.curseforge.com/projects/codechicken-lib-1-8
+  url: https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-1-8
   download_url: https://edge.forgecdn.net/files/2618/630/CodeChickenLib-1.12.2-3.2.2.353-universal.jar
   md5: f8b4843eccafb2213512ba9be17bfad2
 - name: Chicken Chunks
   pattern: ChickenChunks-*.jar
-  url: https://minecraft.curseforge.com/projects/chicken-chunks-1-8
+  url: https://www.curseforge.com/minecraft/mc-mods/chicken-chunks-1-8
   download_url: https://edge.forgecdn.net/files/2594/241/ChickenChunks-1.12.2-2.4.1.73-universal.jar
   md5: c930adfeaa59c7d846b440e11a101d97
 - name: CoFH Core
   pattern: CoFHCore-*.jar
-  url: https://minecraft.curseforge.com/projects/cofh-core
+  url: https://www.curseforge.com/minecraft/mc-mods/cofh-core
   download_url: https://edge.forgecdn.net/files/2716/100/CoFHCore-1.12.2-4.6.3.27-universal.jar
   md5: 90efac9c0abffa63c6da1453ceca1d68
 - name: CoFH World
   pattern: CoFHWorld-*.jar
-  url: https://minecraft.curseforge.com/projects/cofh-world
+  url: https://www.curseforge.com/minecraft/mc-mods/cofh-world
   download_url: https://edge.forgecdn.net/files/2715/784/CoFHWorld-1.12.2-1.3.1.7-universal.jar
   md5: c196ade3fe4f33b4d38b4de43326ae2d
 - name: Canny Composter
   pattern: composter-*.jar
-  url: https://minecraft.curseforge.com/projects/composter
+  url: https://www.curseforge.com/minecraft/mc-mods/composter
   download_url: https://edge.forgecdn.net/files/2603/332/composter-1.12.2-1.9.2.jar
   md5: e4f77f9b928514fc0df392706afd51f1
 - name: ConnectedTexturesMod
   pattern: CTM-*.jar
-  url: https://minecraft.curseforge.com/projects/ctm
+  url: https://www.curseforge.com/minecraft/mc-mods/ctm
   download_url: https://edge.forgecdn.net/files/2642/375/CTM-MC1.12.2-0.3.3.22.jar
   md5: 086cd9da4b8c50a9e483c7b580a9c4d8
 - name: Crafting Tweaks
   pattern: CraftingTweaks_*.jar
-  url: https://minecraft.curseforge.com/projects/crafting-tweaks
+  url: https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks
   download_url: https://edge.forgecdn.net/files/2562/139/CraftingTweaks_1.12.2-8.1.9.jar
   md5: ffd1e2b5c4f244f4a7c6d4ee2e4c2090
 - name: Custom Mob Spawner
@@ -130,12 +130,12 @@
   md5: cd52040afaf2cf8b50da6d9bb9909188
 - name: Custom NPCs
   pattern: CustomNPCs_*.jar
-  url: https://minecraft.curseforge.com/projects/custom-npcs
+  url: https://www.curseforge.com/minecraft/mc-mods/custom-npcs
   download_url: https://edge.forgecdn.net/files/2666/900/CustomNPCs_1.12.2(30Jan19).jar
   md5: 41dd749f0ea2a95ac6745684c2f4c26e
 - name: Decocraft 2
   pattern: Decocraft-*.jar
-  url: https://minecraft.curseforge.com/projects/decocraft2
+  url: https://www.curseforge.com/minecraft/mc-mods/decocraft2
   download_url: https://edge.forgecdn.net/files/2621/15/Decocraft-2.6.2_1.12.2.jar
   md5: f1af752dd335560a3429242e361d15a4
 - name: DrZhark's Mo'Creatures
@@ -145,7 +145,7 @@
   md5: b02c58883f3d2956017639c6000d071e
 - name: DynmapForge
   pattern: Dynmap-*.jar
-  url: https://minecraft.curseforge.com/projects/dynmapforge
+  url: https://www.curseforge.com/minecraft/mc-mods/dynmapforge
   download_url: https://edge.forgecdn.net/files/2722/448/Dynmap-3.0-beta-4-forge-1.12.2.jar
   md5: 37a9f95eb8c615286f3c9eabddb61f61
 - name: DynmapBlockScan
@@ -155,37 +155,37 @@
   md5: 8dfe0d6eb493db1e281fe78e576e57bc
 - name: Ender Core
   pattern: EnderCore-*.jar
-  url: https://minecraft.curseforge.com/projects/endercore
+  url: https://www.curseforge.com/minecraft/mc-mods/endercore
   download_url: https://edge.forgecdn.net/files/2699/428/EnderCore-1.12.2-0.5.57.jar
   md5: 359cc98f8d86c2e43f3b0cbb0758a796
 - name: Ender IO
   pattern: EnderIO-*.jar
-  url: https://minecraft.curseforge.com/projects/ender-io
+  url: https://www.curseforge.com/minecraft/mc-mods/ender-io
   download_url: https://edge.forgecdn.net/files/2708/308/EnderIO-1.12.2-5.0.44.jar
   md5: 2ecb643959ed9121245d8d3fb7bc51b3
 - name: ExtraCells2
   pattern: ExtraCells-*.jar
-  url: https://minecraft.curseforge.com/projects/extracells2
+  url: https://www.curseforge.com/minecraft/mc-mods/extracells2
   download_url: https://edge.forgecdn.net/files/2653/854/ExtraCells-1.12.2-2.6.2a.jar
   md5: d289ffbb9f618e524ece8a2c944498e0
 - name: Extra Utilities
   pattern: extrautils2-*.jar
-  url: https://minecraft.curseforge.com/projects/extra-utilities
+  url: https://www.curseforge.com/minecraft/mc-mods/extra-utilities
   download_url: https://edge.forgecdn.net/files/2678/374/extrautils2-1.12-1.9.9.jar
   md5: 1ea591619e6d5204bf077214868772ef
 - name: Extreme Reactors
   pattern: ExtremeReactors-*.jar
-  url: https://minecraft.curseforge.com/projects/extreme-reactors
+  url: https://www.curseforge.com/minecraft/mc-mods/extreme-reactors
   download_url: https://edge.forgecdn.net/files/2705/875/ExtremeReactors-1.12.2-0.4.5.66.jar
   md5: 47f9774bd221c4b41c764e1d5c2893f7
 - name: Flood Lights
   pattern: FloodLights-*.jar
-  url: https://minecraft.curseforge.com/projects/floodlights
+  url: https://www.curseforge.com/minecraft/mc-mods/floodlights
   download_url: https://edge.forgecdn.net/files/2669/151/FloodLights-1.12.2-1.3.2-14.jar
   md5: 23270385e5a04f185b969eaa9b80b093
 - name: Forestry
   pattern: forestry_*.jar
-  url: https://minecraft.curseforge.com/projects/forestry
+  url: https://www.curseforge.com/minecraft/mc-mods/forestry
   download_url: https://edge.forgecdn.net/files/2684/780/forestry_1.12.2-5.8.2.387.jar
   md5: 367a01e7ff21262fa3dfc71e8fbd7332
 - name: Forgelin
@@ -195,52 +195,52 @@
   md5: 59035365f7af35f599d1c4baade64d8b
 - name: Hammer (Lib) Core
   pattern: HammerCore-*.jar
-  url: https://minecraft.curseforge.com/projects/hammer-lib
+  url: https://www.curseforge.com/minecraft/mc-mods/hammer-lib
   download_url: https://edge.forgecdn.net/files/2710/204/HammerCore-1.12.2-2.0.4.7.jar
   md5: 68c546a87aafcd1bc3800981889fd4cc
 - name: Hunger Overhaul
   pattern: HungerOverhaul-*.jar
-  url: https://minecraft.curseforge.com/projects/hunger-overhaul
+  url: https://www.curseforge.com/minecraft/mc-mods/hunger-overhaul
   download_url: https://edge.forgecdn.net/files/2565/122/HungerOverhaul-1.12.2-1.3.3.jenkins148.jar
   md5: 61884285e72495c1769c0e02730cf590
 - name: Hwyla
   pattern: Hwyla-*.jar
-  url: https://minecraft.curseforge.com/projects/hwyla
+  url: https://www.curseforge.com/minecraft/mc-mods/hwyla
   download_url: https://edge.forgecdn.net/files/2568/751/Hwyla-1.8.26-B41_1.12.2.jar
   md5: bca1c069d9171d331d211d24e8a3b770
 - name: Immersive Engineering
   pattern: ImmersiveEngineering-*.jar
-  url: https://minecraft.curseforge.com/projects/immersive-engineering
+  url: https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
   download_url: https://edge.forgecdn.net/files/2676/501/ImmersiveEngineering-0.12-89.jar
   md5: b79a17d68e023e2cab3fcb99fff19f9a
 - name: In Control
   pattern: incontrol-*.jar
-  url: https://minecraft.curseforge.com/projects/in-control
+  url: https://www.curseforge.com/minecraft/mc-mods/in-control
   download_url: https://edge.forgecdn.net/files/2717/826/incontrol-1.12-3.9.10.jar
   md5: 01ea81ed7e5961ae622b06f50e479e25
 - name: Industrial Foregoing
   pattern: industrialforegoing-*.jar
-  url: https://minecraft.curseforge.com/projects/industrial-foregoing
+  url: https://www.curseforge.com/minecraft/mc-mods/industrial-foregoing
   download_url: https://edge.forgecdn.net/files/2699/878/industrialforegoing-1.12.2-1.12.12-236.jar
   md5: 7726b3d8b19dd88142db381a6d25c47a
 - name: Inventory Tweaks
   pattern: InventoryTweaks-*.jar
-  url: https://minecraft.curseforge.com/projects/inventory-tweaks
+  url: https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks
   download_url: https://edge.forgecdn.net/files/2482/481/InventoryTweaks-1.63.jar
   md5: 1e2e33e5710394252abc4b014bc3dcbd
 - name: Just Enough Items
   pattern: jei_*.jar
-  url: https://minecraft.curseforge.com/projects/jei
+  url: https://www.curseforge.com/minecraft/mc-mods/jei
   download_url: https://edge.forgecdn.net/files/2682/936/jei_1.12.2-4.15.0.268.jar
   md5: 02f985065e7a2fdd17196b3030a067a4
 - name: Journey Map
   pattern: journeymap-*.jar
-  url: https://minecraft.curseforge.com/projects/journeymap
+  url: https://www.curseforge.com/minecraft/mc-mods/journeymap
   download_url: https://edge.forgecdn.net/files/2682/920/journeymap-1.12.2-5.5.4.jar
   md5: e8f1ea79b6a51ed9bb3fe1062f8093a0
 - name: Just Enough Energistics (JEE)
   pattern: JustEnoughEnergistics-*.jar
-  url: https://minecraft.curseforge.com/projects/just-enough-energistics-jee
+  url: https://www.curseforge.com/minecraft/mc-mods/just-enough-energistics-jee
   download_url: https://edge.forgecdn.net/files/2663/371/JustEnoughEnergistics-1.12.2-1.0.6.jar
   md5: 721b76c9f63d80bdd92719bac710f299
 - name: LiteLoader
@@ -250,32 +250,32 @@
   md5: 1420785ecbfed5aff4a586c5c9dd97eb
 - name: Mantle
   pattern: Mantle-*.jar
-  url: https://minecraft.curseforge.com/projects/mantle
+  url: https://www.curseforge.com/minecraft/mc-mods/mantle
   download_url: https://edge.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar
   md5: 1026f5f8d3c4997831decd9023ca65a6
 - name: MatterLink
   pattern: MatterLink-*.jar
-  url: https://minecraft.curseforge.com/projects/matterlink
+  url: https://www.curseforge.com/minecraft/mc-mods/matterlink
   download_url: https://edge.forgecdn.net/files/2695/256/MatterLink-1.12.2-1.6.4.jar
   md5: 084e83ec20258a55d753173ba6054f4d
 - name: NoMoreRecipeConflict
   pattern: NoMoreRecipeConflict-*.jar
-  url: https://minecraft.curseforge.com/projects/stimmedcow-nomorerecipeconflict
+  url: https://www.curseforge.com/minecraft/mc-mods/stimmedcow-nomorerecipeconflict
   download_url: https://edge.forgecdn.net/files/2671/230/NoMoreRecipeConflict-0.13(1.12.2).jar
   md5: 95ca245f9c463dfa7467575e37d6cb2e
 - name: Not Enough Items
   pattern: NotEnoughItems-*.jar
-  url: https://minecraft.curseforge.com/projects/not-enough-items-1-8
+  url: https://www.curseforge.com/minecraft/mc-mods/not-enough-items-1-8
   download_url: https://edge.forgecdn.net/files/2626/87/NotEnoughItems-1.12.2-2.4.2.240-universal.jar
   md5: 064beb533ca885ace7654c5d4066c8c7
 - name: OpenBlocks
   pattern: OpenBlocks-*.jar
-  url: https://minecraft.curseforge.com/projects/openblocks
+  url: https://www.curseforge.com/minecraft/mc-mods/openblocks
   download_url: https://edge.forgecdn.net/files/2699/56/OpenBlocks-1.12.2-1.8.1.jar
   md5: cd7f642f983669c6ae94d6a999d0d6e9
 - name: OpenModsLib
   pattern: OpenModsLib-*.jar
-  url: https://minecraft.curseforge.com/projects/openmodslib
+  url: https://www.curseforge.com/minecraft/mc-mods/openmodslib
   download_url: https://edge.forgecdn.net/files/2699/55/OpenModsLib-1.12.2-0.12.2.jar
   md5: 9c0606c553fbdf86e2f459c1cc40414d
 - name: OptiFine
@@ -285,68 +285,68 @@
   md5: null
 - name: Oreberries
   pattern: oreberries-*.jar
-  url: https://minecraft.curseforge.com/projects/oreberries
+  url: https://www.curseforge.com/minecraft/mc-mods/oreberries
   download_url: https://edge.forgecdn.net/files/2578/45/oreberries-1.12.x-0.5.0.jar
   md5: 2c088f01c979d9e255d2be99ca931234
 - name: OreDictionaryConverter
   pattern: OreDictionaryConverter-*.jar
-  url: https://minecraft.curseforge.com/projects/oredictionaryconverter
+  url: https://www.curseforge.com/minecraft/mc-mods/oredictionaryconverter
   download_url: https://github.com/Brycey92/OreDictionaryConverter/releases/download/1.11.0/OreDictionaryConverter-1.11.0.jar
   md5: a3340c074fb054d069b03d03374b8e0b
 - name: Pam's HarvestCraft
   pattern: Pam's HarvestCraft *.jar
-  url: https://minecraft.curseforge.com/projects/pams-harvestcraft
+  url: https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft
   download_url: https://edge.forgecdn.net/files/2717/443/Pam's HarvestCraft 1.12.2zd
     Surprise for Yogcast.jar
   md5: d383ea51ccdd80e51ef8079d36c03ef1
 - name: Ping
   pattern: Ping-*.jar
-  url: https://minecraft.curseforge.com/projects/ping
+  url: https://www.curseforge.com/minecraft/mc-mods/ping
   download_url: https://edge.forgecdn.net/files/2676/457/Ping-1.12.2-1.4.5.jar
   md5: 0e8311f92a716cee436dbfc8d47bae6e
 - name: Placebo
   pattern: Placebo-*.jar
-  url: https://minecraft.curseforge.com/projects/placebo
+  url: https://www.curseforge.com/minecraft/mc-mods/placebo
   download_url: https://edge.forgecdn.net/files/2694/382/Placebo-1.12.2-1.6.0.jar
   md5: a9ecfa296b2b1203ed5a68ed6c01833a
 - name: Plants
   pattern: Plants-*.jar
-  url: https://minecraft.curseforge.com/projects/plants
+  url: https://www.curseforge.com/minecraft/mc-mods/plants
   download_url: https://edge.forgecdn.net/files/2697/165/Plants-1.12.2-2.10.7.jar
   md5: 71a182837d0340b899d9f98e6b689686
 - name: PTRLib
   pattern: PTRLib-*.jar
-  url: https://minecraft.curseforge.com/projects/ptrlib
+  url: https://www.curseforge.com/minecraft/mc-mods/ptrlib
   download_url: https://edge.forgecdn.net/files/2685/154/PTRLib-1.0.4.jar
   md5: 7cdde85216395abe430a7ff185650370
 - name: Redstone Flux
   pattern: RedstoneFlux-*.jar
-  url: https://minecraft.curseforge.com/projects/redstone-flux
+  url: https://www.curseforge.com/minecraft/mc-mods/redstone-flux
   download_url: https://edge.forgecdn.net/files/2623/90/RedstoneFlux-1.12-2.1.0.6-universal.jar
   md5: f00530b437c41a189dbf8a85d0ac40b6
 - name: SecretRoomsMod
   pattern: secretroomsmod-*.jar
-  url: https://minecraft.curseforge.com/projects/secretroomsmod
+  url: https://www.curseforge.com/minecraft/mc-mods/secretroomsmod
   download_url: https://edge.forgecdn.net/files/2561/617/secretroomsmod-1.12.2-5.6.4.jar
   md5: d853b4060cf429ce7765a750501de764
 - name: Signpost
   pattern: signpost-*.jar
-  url: https://minecraft.curseforge.com/projects/signpost
+  url: https://www.curseforge.com/minecraft/mc-mods/signpost
   download_url: https://edge.forgecdn.net/files/2709/716/signpost-1.12.2-1.08.2.jar
   md5: f2f34063d8bbae9f21eff8daef50ffa6
 - name: Storage Drawers
   pattern: StorageDrawers-*.jar
-  url: https://minecraft.curseforge.com/projects/storage-drawers
+  url: https://www.curseforge.com/minecraft/mc-mods/storage-drawers
   download_url: https://edge.forgecdn.net/files/2642/386/StorageDrawers-1.12.2-5.3.8.jar
   md5: ab008fc9f41cd9e215b4c8d5d7e5be6e
 - name: Storage Drawers Extras
   pattern: StorageDrawersExtras-*.jar
-  url: https://minecraft.curseforge.com/projects/storage-drawers-extras
+  url: https://www.curseforge.com/minecraft/mc-mods/storage-drawers-extras
   download_url: https://edge.forgecdn.net/files/2443/623/StorageDrawersExtras-1.12-3.1.0.jar
   md5: 972063ce9ceb8df9af49e73858e557fa
 - name: Tinkers Construct
   pattern: TConstruct-*.jar
-  url: https://minecraft.curseforge.com/projects/tinkers-construct
+  url: https://www.curseforge.com/minecraft/mc-mods/tinkers-construct
   download_url: https://edge.forgecdn.net/files/2693/496/TConstruct-1.12.2-2.12.0.135.jar
   md5: 7f983680e4040cc1d70ea5c6fe1819aa
 - name: Terra
@@ -356,61 +356,61 @@
   md5: null
 - name: Tesla Core Lib
   pattern: tesla-core-lib-*.jar
-  url: https://minecraft.curseforge.com/projects/tesla-core-lib
+  url: https://www.curseforge.com/minecraft/mc-mods/tesla-core-lib
   download_url: https://edge.forgecdn.net/files/2580/52/tesla-core-lib-1.12.2-1.0.15.jar
   md5: b0214b0a90243374c6bd89a023f2b26e
 - name: Thermal Dynamics
   pattern: ThermalDynamics-*.jar
-  url: https://minecraft.curseforge.com/projects/thermal-dynamics
+  url: https://www.curseforge.com/minecraft/mc-mods/thermal-dynamics
   download_url: https://edge.forgecdn.net/files/2716/138/ThermalDynamics-1.12.2-2.5.5.21-universal.jar
   md5: 3317c6f327d7ebe0ee3bd6206ececb02
 - name: Thermal Expansion
   pattern: ThermalExpansion-*.jar
-  url: https://minecraft.curseforge.com/projects/thermal-expansion
+  url: https://www.curseforge.com/minecraft/mc-mods/thermal-expansion
   download_url: https://edge.forgecdn.net/files/2715/789/ThermalExpansion-1.12.2-5.5.4.43-universal.jar
   md5: 53144cfec12795862d20aa07750c9a59
 - name: Thermal Foundation
   pattern: ThermalFoundation-*.jar
-  url: https://minecraft.curseforge.com/projects/thermal-foundation
+  url: https://www.curseforge.com/minecraft/mc-mods/thermal-foundation
   download_url: https://edge.forgecdn.net/files/2715/788/ThermalFoundation-1.12.2-2.6.3.27-universal.jar
   md5: 0f61017dc9412ba4aad8a64f7bca16bb
 - name: Tinkers' Tool Leveling
   pattern: TinkerToolLeveling-*.jar
-  url: https://minecraft.curseforge.com/projects/tinkers-tool-leveling
+  url: https://www.curseforge.com/minecraft/mc-mods/tinkers-tool-leveling
   download_url: https://edge.forgecdn.net/files/2630/860/TinkerToolLeveling-1.12.2-1.1.0.jar
   md5: f9253fe86c6649afbf49d221c71ba19a
 - name: TorchMaster
   pattern: torchmaster_*.jar
-  url: https://minecraft.curseforge.com/projects/torchmaster
+  url: https://www.curseforge.com/minecraft/mc-mods/torchmaster
   download_url: https://edge.forgecdn.net/files/2657/299/torchmaster_1.12.2-1.7.1.74.jar
   md5: 14de6fbebbfc54bbc350a71dcc0359dc
 - name: Underground Biomes
   pattern: UndergroundBiomesConstructs-*.jar
-  url: https://minecraft.curseforge.com/projects/underground-biomes
+  url: https://www.curseforge.com/minecraft/mc-mods/underground-biomes
   download_url: https://edge.forgecdn.net/files/2717/845/UndergroundBiomesConstructs-1.12-1.3.5.jar
   md5: d90515d7349229d6a4798ece423e2c2d
 - name: UniDict
   pattern: UniDict-*.jar
-  url: https://minecraft.curseforge.com/projects/unidict
+  url: https://www.curseforge.com/minecraft/mc-mods/unidict
   download_url: https://edge.forgecdn.net/files/2652/588/UniDict-1.12.2-2.9.2.jar
   md5: b1ba004241d86a3e1280c8911c2b4ff2
 - name: WanionLib
   pattern: WanionLib-*.jar
-  url: https://minecraft.curseforge.com/projects/wanionlib
+  url: https://www.curseforge.com/minecraft/mc-mods/wanionlib
   download_url: https://edge.forgecdn.net/files/2651/482/WanionLib-1.12.2-2.2.jar
   md5: da46d9a391cb6ac4d3bd453db2158e58
 - name: Wawla
   pattern: Wawla-*.jar
-  url: https://minecraft.curseforge.com/projects/wawla-what-are-we-looking-at
+  url: https://www.curseforge.com/minecraft/mc-mods/wawla-what-are-we-looking-at
   download_url: https://edge.forgecdn.net/files/2707/185/Wawla-1.12.2-2.5.273.jar
   md5: fe81b7fe5374ce2d1641836a14ebe37f
 - name: Wumple Util Library
   pattern: wumpleutil-*.jar
-  url: https://minecraft.curseforge.com/projects/wumpleutil
+  url: https://www.curseforge.com/minecraft/mc-mods/wumpleutil
   download_url: https://edge.forgecdn.net/files/2617/845/wumpleutil-1.12.2-2.12.6.jar
   md5: bff62b49e6789da70db2f5f4d5063cd5
 - name: ZeroCore
   pattern: zerocore-*.jar
-  url: https://minecraft.curseforge.com/projects/zerocore
+  url: https://www.curseforge.com/minecraft/mc-mods/zerocore
   download_url: https://edge.forgecdn.net/files/2670/570/zerocore-1.12.2-0.1.2.8.jar
   md5: cc782f73e62792dcdb108449baec110f
