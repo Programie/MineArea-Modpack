@@ -83,7 +83,7 @@ class Mod:
     def check_url(self):
         parsed_url = urlparse(self.url)
 
-        if parsed_url.netloc != "minecraft.curseforge.com":
+        if parsed_url.netloc != "www.curseforge.com":
             print("Skipping unsupported URL: {}".format(self.url), file=sys.stderr)
             return False
 
@@ -96,7 +96,13 @@ class Mod:
         self.latest_filename = os.path.basename(unquote(urlparse(self.download_url).path).replace("+", " "))
 
     def update_latest_file(self):
-        response = requests.get("{}/files/latest".format(self.url), allow_redirects=False)
+        response = requests.get("{}/download".format(self.url), allow_redirects=False)
+
+        response.raise_for_status()
+
+        match = re.search("/minecraft/mc-mods/[^/]+/download/([0-9]+)/file", response.text)
+
+        response = requests.get("https://www.curseforge.com{}".format(match.group(0)), allow_redirects=False)
 
         response.raise_for_status()
 
