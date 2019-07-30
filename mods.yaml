@@ -21,8 +21,8 @@
 - name: Applied Energistics 2
   pattern: appliedenergistics2-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
-  download_url: https://edge.forgecdn.net/files/2652/453/appliedenergistics2-rv6-stable-6.jar
-  md5: 9c7b1b142d9676cec4f92b7e07ac3cd9
+  download_url: https://edge.forgecdn.net/files/2747/63/appliedenergistics2-rv6-stable-7.jar
+  md5: b8667d60a761d5b5ae3c8a15192f9e28
 - name: AutoPlant
   pattern: autoplant-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/autoplant
@@ -156,13 +156,13 @@
 - name: Ender Core
   pattern: EnderCore-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/endercore
-  download_url: https://edge.forgecdn.net/files/2699/428/EnderCore-1.12.2-0.5.57.jar
-  md5: 359cc98f8d86c2e43f3b0cbb0758a796
+  download_url: https://edge.forgecdn.net/files/2732/682/EnderCore-1.12.2-0.5.59.jar
+  md5: 2cea20b1a4d7b1b16b5fdd18b25ddf5a
 - name: Ender IO
   pattern: EnderIO-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/ender-io
-  download_url: https://edge.forgecdn.net/files/2708/308/EnderIO-1.12.2-5.0.44.jar
-  md5: 2ecb643959ed9121245d8d3fb7bc51b3
+  download_url: https://edge.forgecdn.net/files/2732/703/EnderIO-1.12.2-5.0.46.jar
+  md5: 5e53d61940020939b682d0a19b2a15c4
 - name: ExtraCells2
   pattern: ExtraCells-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/extracells2
@@ -176,8 +176,8 @@
 - name: Extreme Reactors
   pattern: ExtremeReactors-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/extreme-reactors
-  download_url: https://edge.forgecdn.net/files/2705/875/ExtremeReactors-1.12.2-0.4.5.66.jar
-  md5: 47f9774bd221c4b41c764e1d5c2893f7
+  download_url: https://edge.forgecdn.net/files/2722/271/ExtremeReactors-1.12.2-0.4.5.67.jar
+  md5: 92e5cc48aca43add940af096e7694141
 - name: Flood Lights
   pattern: FloodLights-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/floodlights
@@ -216,13 +216,13 @@
 - name: In Control
   pattern: incontrol-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/in-control
-  download_url: https://edge.forgecdn.net/files/2717/826/incontrol-1.12-3.9.10.jar
-  md5: 01ea81ed7e5961ae622b06f50e479e25
+  download_url: https://edge.forgecdn.net/files/2745/849/incontrol-1.12-3.9.13.jar
+  md5: 2933f7d3332aadab1b46ed2924810f98
 - name: Industrial Foregoing
   pattern: industrialforegoing-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/industrial-foregoing
-  download_url: https://edge.forgecdn.net/files/2699/878/industrialforegoing-1.12.2-1.12.12-236.jar
-  md5: 7726b3d8b19dd88142db381a6d25c47a
+  download_url: https://edge.forgecdn.net/files/2745/321/industrialforegoing-1.12.2-1.12.13-237.jar
+  md5: a9330399f14295d90e4ec3b5bb93f81f
 - name: Inventory Tweaks
   pattern: InventoryTweaks-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks
@@ -241,8 +241,8 @@
 - name: Just Enough Energistics (JEE)
   pattern: JustEnoughEnergistics-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/just-enough-energistics-jee
-  download_url: https://edge.forgecdn.net/files/2663/371/JustEnoughEnergistics-1.12.2-1.0.6.jar
-  md5: 721b76c9f63d80bdd92719bac710f299
+  download_url: https://edge.forgecdn.net/files/2726/897/JustEnoughEnergistics-1.12.2-1.0.7.jar
+  md5: d4e3b8bad7e42e1d0baed63dd32538af
 - name: LiteLoader
   pattern: liteloader-*.jar
   url: https://www.liteloader.com
@@ -296,9 +296,8 @@
 - name: Pam's HarvestCraft
   pattern: Pam's HarvestCraft *.jar
   url: https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft
-  download_url: https://edge.forgecdn.net/files/2717/443/Pam's HarvestCraft 1.12.2zd
-    Surprise for Yogcast.jar
-  md5: d383ea51ccdd80e51ef8079d36c03ef1
+  download_url: https://edge.forgecdn.net/files/2751/199/Pam's HarvestCraft 1.12.2ze.jar
+  md5: 386f64f19b1b739a7cfa954753aa397e
 - name: Ping
   pattern: Ping-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/ping
@@ -347,8 +346,8 @@
 - name: Tinkers Construct
   pattern: TConstruct-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/tinkers-construct
-  download_url: https://edge.forgecdn.net/files/2693/496/TConstruct-1.12.2-2.12.0.135.jar
-  md5: 7f983680e4040cc1d70ea5c6fe1819aa
+  download_url: https://edge.forgecdn.net/files/2731/543/TConstruct-1.12.2-2.12.0.157.jar
+  md5: 9c8942eff75c9f2b4a13ec085c118b56
 - name: Terra
   pattern: Terra *.jar
   url: https://github.com/TheKiipster/Terra
@@ -387,8 +386,8 @@
 - name: Underground Biomes
   pattern: UndergroundBiomesConstructs-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/underground-biomes
-  download_url: https://edge.forgecdn.net/files/2717/845/UndergroundBiomesConstructs-1.12-1.3.5.jar
-  md5: d90515d7349229d6a4798ece423e2c2d
+  download_url: https://edge.forgecdn.net/files/2738/935/UndergroundBiomesConstructs-1.12-1.3.6.jar
+  md5: def84b207ad098fd5b2230cc46665974
 - name: UniDict
   pattern: UniDict-*.jar
   url: https://www.curseforge.com/minecraft/mc-mods/unidict

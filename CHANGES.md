@@ -3,7 +3,17 @@
 ## 1.14 (pending)
 
 Updated mods:
+- [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2): rv6-stable-6 -> rv6-stable-7
 - [Carpenter's Blocks](https://www.carpentersblocks.com): v3.4.0-poc.5 -> v3.4.0-poc.6
+- [Ender Core](https://www.curseforge.com/minecraft/mc-mods/endercore): 0.5.57 -> 0.5.59
+- [Ender IO](https://www.curseforge.com/minecraft/mc-mods/ender-io): 5.0.44 -> 5.0.46
+- [Extreme Reactors](https://www.curseforge.com/minecraft/mc-mods/extreme-reactors): 0.4.5.66 -> 0.4.5.67
+- [In Control](https://www.curseforge.com/minecraft/mc-mods/in-control): 3.9.10 -> 3.9.13
+- [Industrial Foregoing](https://www.curseforge.com/minecraft/mc-mods/industrial-foregoing): 1.12.12 -> 1.12.13
+- [Just Enough Energistics (JEE)](https://www.curseforge.com/minecraft/mc-mods/just-enough-energistics-jee): 1.0.6 -> 1.0.7
+- [Pam's HarvestCraft](https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft): 1.12.2zd -> 1.12.2ze
+- [Tinkers Construct](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct): 2.12.0.135 -> 2.12.0.157
+- [Underground Biomes](https://www.curseforge.com/minecraft/mc-mods/underground-biomes): 1.3.5 -> 1.3.6
 
 ## 1.13 (2019-06-08)
 
