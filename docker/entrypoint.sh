@@ -23,7 +23,7 @@ case "$1" in
             java_opts+=("-Xmx${JAVA_HEAP_MAX}")
 
             if [[ ! -z ${JAVA_HEAP_MIN} ]]; then
-                java_opts+=$("-Xms${JAVA_HEAP_MIN}")
+                java_opts+=("-Xms${JAVA_HEAP_MIN}")
             fi
         fi
 
