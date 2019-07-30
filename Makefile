@@ -38,4 +38,4 @@ server:
 
 server-docker: server
 	rsync -av --delete $(server_dir)/ $(docker_dir)/server/
-	docker build -t programie/minearea-mc-server $(docker_dir)
+	docker build --pull -t registry.gitlab.com/programie/minearea-modpack $(docker_dir)
