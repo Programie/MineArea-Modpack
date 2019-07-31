@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-stretch
+FROM openjdk:8-jre-slim-stretch
 
 ENV MINECRAFT_DIR=/opt/minecraft \
     MINECRAFT_USER=minecraft \
@@ -8,12 +8,12 @@ ENV MINECRAFT_DIR=/opt/minecraft \
     GOSU_VERSION=1.11
 
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip rsync && \
-    pip3 install jproperties3 mcrcon wget; \
+    apt-get install -y python3 python3-pip rsync wget && \
+    pip3 install jproperties3 mcrcon && \
+    wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64" && \
+    chmod +x /usr/local/bin/gosu && \
+    apt-get remove -y wget && \
     rm -rf /var/lib/apt/lists/*
-
-RUN wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64" && \
-    chmod +x /usr/local/bin/gosu
 
 RUN groupadd -g 999 ${MINECRAFT_USER} && \
     useradd -d ${MINECRAFT_DIR} -m -u 999 -g 999 ${MINECRAFT_GROUP}
