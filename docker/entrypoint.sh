@@ -18,7 +18,7 @@ case "$1" in
         java_opts=("java")
 
         if [[ -z ${JAVA_HEAP_MAX} ]]; then
-            java_opts+=("-XX:+UnlockExperimentalVMOptions" "-XX:+UseCGroupMemoryLimitForHeap")
+            java_opts+=("-XX:+UnlockExperimentalVMOptions" "-XX:+UseCGroupMemoryLimitForHeap" "-XX:MaxRAMFraction=1")
         else
             java_opts+=("-Xmx${JAVA_HEAP_MAX}")
 
