@@ -37,6 +37,10 @@ case "$1" in
 
         java_opts+=("-jar" "${MINECRAFT_DIR}/minecraftforge.jar" "--noconsole")
 
+        if ! fgrep -qs "enable-rcon" ${MINECRAFT_DIR}/server.properties; then
+            echo "enable-rcon=true" >> ${MINECRAFT_DIR}/server.properties
+        fi
+
         if ! fgrep -qs "rcon.port" ${MINECRAFT_DIR}/server.properties; then
             echo "rcon.port=25575" >> ${MINECRAFT_DIR}/server.properties
         fi
