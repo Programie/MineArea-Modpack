@@ -5,7 +5,7 @@ ENV MINECRAFT_DIR=/opt/minecraft \
     MINECRAFT_GROUP=minecraft \
     JMXREMOTE_PORT=3000 \
     JMXREMOTE_HOSTNAME=localhost \
-    GOSU_VERSION=1.11
+    GOSU_VERSION=1.11 \
     MCRCON_VERSION=0.0.5
 
 RUN apt-get update && \
