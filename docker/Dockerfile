@@ -6,12 +6,13 @@ ENV MINECRAFT_DIR=/opt/minecraft \
     JMXREMOTE_PORT=3000 \
     JMXREMOTE_HOSTNAME=localhost \
     GOSU_VERSION=1.11
+    MCRCON_VERSION=0.0.5
 
 RUN apt-get update && \
     apt-get install -y rsync wget && \
     wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64" && \
     chmod +x /usr/local/bin/gosu && \
-    wget -O mcrcon.tar.gz https://github.com/Tiiffi/mcrcon/releases/download/v0.0.5/mcrcon-0.0.5-linux-x86-64.tar.gz && \
+    wget -O mcrcon.tar.gz https://github.com/Tiiffi/mcrcon/releases/download/v${MCRCON_VERSION}/mcrcon-${MCRCON_VERSION}-linux-x86-64.tar.gz && \
     tar xf mcrcon.tar.gz && \
     mv mcrcon /opt/mcrcon && \
     chmod +x /opt/mcrcon && \
