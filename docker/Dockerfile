@@ -8,17 +8,20 @@ ENV MINECRAFT_DIR=/opt/minecraft \
     GOSU_VERSION=1.11
 
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip rsync wget && \
-    pip3 install jproperties3 mcrcon && \
+    apt-get install -y rsync wget && \
     wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64" && \
     chmod +x /usr/local/bin/gosu && \
+    wget -O mcrcon.tar.gz https://github.com/Tiiffi/mcrcon/releases/download/v0.0.5/mcrcon-0.0.5-linux-x86-64.tar.gz && \
+    tar xf mcrcon.tar.gz && \
+    mv mcrcon /opt/mcrcon && \
+    chmod +x /opt/mcrcon && \
     apt-get remove -y wget && \
     rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -g 999 ${MINECRAFT_USER} && \
     useradd -d ${MINECRAFT_DIR} -m -u 999 -g 999 ${MINECRAFT_GROUP}
 
-COPY ./mcrcon.py /usr/local/bin/mcrcon
+COPY ./mcrcon.sh /usr/local/bin/mcrcon
 COPY ./entrypoint.sh /entrypoint.sh
 
 COPY ./server /usr/src/minecraft
