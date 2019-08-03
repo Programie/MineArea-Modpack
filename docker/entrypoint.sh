@@ -37,6 +37,10 @@ case "$1" in
 
         java_opts+=("-jar" "${MINECRAFT_DIR}/minecraftforge.jar" "--noconsole")
 
+        if ! fgrep -qs "rcon.port" ${MINECRAFT_DIR}/server.properties; then
+            echo "rcon.port=25575" >> ${MINECRAFT_DIR}/server.properties
+        fi
+
         if ! fgrep -qs "rcon.password" ${MINECRAFT_DIR}/server.properties; then
             echo "rcon.password=$(date +%s | sha256sum | base64 | head -c 32)" >> ${MINECRAFT_DIR}/server.properties
         fi
